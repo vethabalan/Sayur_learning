@@ -1,0 +1,10 @@
+GIT AND GITHUB
+Git is a devops tool used for source code management and tracking changes in the source code.
+Git can be directly installed in the system.
+Git creates the communication between the developers that if any changes may made by any developer it can be tracked by other developers.
+Git is a command line where the code can be changed using command like commit, merge, push, pull etc..
+
+Git-Hub:
+       Git hub is a web based interface that uses git, the open source version control system that lets multiple people make separate changes to the code and stores it in a unique repository.
+Git hub is a web based cloud where we can let all the local files merged and stored as a master repository.
+It is a centralised source.
