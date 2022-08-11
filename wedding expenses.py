@@ -31,14 +31,18 @@ total_cost_for_wedding = total_lunch_cost + total_breakfast_cost + total_hall_co
 
 print("total_cost_for_wedding:",total_cost_for_wedding)
 
+#total cost of wedding is split between groom and bride
+bride_split = total_cost_for_wedding//2
+print("bride_split:",bride_split)
+
 #we want know the savings of the bride to calculate whether she has to apply for loan
 bride_savings = int(input("savings by bride:"))
 
-#applying if condition to check the total cost of wedding is greater than the bride savings
+#applying if condition to check the bride split is greater than the bride savings
 
-if(total_cost_for_wedding > bride_savings):             #if wedding expense is higher than the savings we need to know the difference between total cost of wedding and bride savings  
+if(total_cost_for_wedding > bride_savings):             #if bride split is higher than the savings we need to know the difference between bride split and bride savings  
 
-    loan_needed = total_cost_for_wedding - bride_savings   #assign the value to the loan needed variable and print how much loan does she need?
+    loan_needed = total_cost_for_wedding - bride_savings   #assign a value to the loan needed variable and print how much loan does she need?
     print("loan_needed:",loan_needed)
 else:
 
