@@ -16,7 +16,7 @@ total_decoration_cost = total_guest * decoration_cost_per_person          #calcu
 
 
 #not all guests are coming by their own vechicles so we need to take it as a input
-guest_coming_by_vehicles = int(input("guest comig by vechicles:"))         
+guest_coming_by_vehicles = int(input("guest coming by vechicles:"))         
 total_parking_cost = guest_coming_by_vehicles * parking_cost              #then we calculate the parking cost per person with guest coming by vechicles
 
  #printing all the total cost of lunch,breakfast,hall,decoration,parking individually
