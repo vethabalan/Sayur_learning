@@ -40,10 +40,10 @@ bride_savings = int(input("savings by bride:"))
 
 #applying if condition to check the bride split is greater than the bride savings
 
-if(total_cost_for_wedding > bride_savings):             #if bride split is higher than the savings we need to know the difference between bride split and bride savings  
+if(bride_split > bride_savings):             #if bride split is higher than the savings we need to know the difference between bride split and bride savings  
 
-    loan_needed = total_cost_for_wedding - bride_savings   #assign a value to the loan needed variable and print how much loan does she need?
+    loan_needed = bride_split - bride_savings   #assign a value to the loan needed variable and print how much loan does she need?
     print("loan_needed:",loan_needed)
 else:
 
-    print("loan_not_needed")                             #if total cost is lesser than the savings print loan not needed
+    print("loan_not_needed")                             #if bride split is lesser than the savings print loan not needed
