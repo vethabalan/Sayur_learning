@@ -1,3 +1,0 @@
-name:vetha
-reg_no:1921
-roll_no:123
