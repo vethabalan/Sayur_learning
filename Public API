@@ -1,0 +1,16 @@
+1.This api returns the informations about a specific language like where it was originated and which state and 
+what is it capital and currency symbols details.
+https://restcountries.com/v3.1/lang/tamil
+
+2.This api returns when we enter a capital of any country it shows the region and sub-region of the country
+and how much population it has? and it's area and the neighbouring countries.
+https://restcountries.com/v2/capital/delhi
+
+3.This api returns the weather details daily for any location.
+https://www.weatherapi.com
+
+4.This api displays thirukkural. 
+https://api-thirukkural.vercel.app/?num=1
+
+5.This api returs the current exchage rate of currency accordin to countries.
+https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/inr.json
