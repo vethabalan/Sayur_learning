@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnsqrt").click(function(e){
+                var num1 = parseFloat($("#txtNo1").val());
+                var num = Math.pow(num1,2);
+                alert(num);
+            });
+            $("#btncube").click(function(e){
+                var num1 = parseFloat($("#txtNo1").val());
+                var num = Math.pow(num1,3);
+                alert(num);
+            });
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQRTCalculator</title>
+    <h1>SqrtCalculator</h1>
+</head>
+<body>
+    <label>enter first number</label>
+    <input type="text" id="txtNo1"></input><br>
+    <br>
+    <button id="btnsqrt">sqrt</button>
+    <button id="btncube">cube</button>
+    <label id="result"></label>
+    
+</body>
+</html>

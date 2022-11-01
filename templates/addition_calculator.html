@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnAdd").click(function(e){
+                var num1 = parseFloat($("#txtNo1").val());
+                var num2 = parseFloat($("#txtNo2").val());
+                var num3 = num1 + num2;
+                alert(num3);
+            });
+            $("#btnSub").click(function(e){
+                var num1 = parseFloat($("#txtNo1").val());
+                var num2 = parseFloat($("#txtNo2").val());
+                var num3 = num1 - num2;
+                alert(num3);
+            });
+            $("#btnMlt").click(function(e){
+                var num1 = parseFloat($("#txtNo1").val());
+                var num2 = parseFloat($("#txtNo2").val());
+                var num3 = num1 * num2;
+                alert(num3);
+            });
+            $("#btnDiv").click(function(e){
+                var num1 = parseFloat($("#txtNo1").val());
+                var num2 = parseFloat($("#txtNo2").val());
+                var num3 = num1 / num2;
+                alert(num3);
+            });
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <h1>Calculator</h1>
+</head>
+<body>
+    <label>enter first number</label>
+    <input type="text" id="txtNo1"></input><br>
+    <br>
+    <label>enter the second number</label>
+    <input type="text" id="txtNo2"></input><br>
+    <button id="btnAdd">add</button>
+    <button id="btnSub">sub</button>
+    <button id="btnMlt">Mlt</button>
+    <button id="btnDiv">Div</button>
+    <label id="result"></label>
+</body>
+</html>
