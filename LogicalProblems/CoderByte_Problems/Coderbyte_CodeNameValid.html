@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://coderbyte.com/editor/Codeland%20Username%20Validation:Python3 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Coderbyte</title>
+    
+<meta name="description" content="Coderbyte is the #1 candidate evaluation and prep platform for assessments, interviews, and take-home projects.">
+<meta name="og:description" content="Coderbyte is the #1 candidate evaluation and prep platform for assessments, interviews, and take-home projects.">
+
+<!-- favicon -->
+<link rel="shortcut icon" href="https://coderbytestaticimages.s3.amazonaws.com/favicon_2.png">
+
+<!-- styles -->
+<link type="text/css" rel="stylesheet" href="./Coderbyte_CodeNameValid_files/global-style.aa05806b0b27196550.css">
+<link rel="stylesheet" href="./Coderbyte_CodeNameValid_files/vue-multiselect-2.1.0.min.css">
+
+<!-- vue included on all pages -->
+<script type="text/javascript" async="" src="./Coderbyte_CodeNameValid_files/js"></script><script type="text/javascript" async="" src="./Coderbyte_CodeNameValid_files/analytics.js.download"></script><script src="./Coderbyte_CodeNameValid_files/359835818235982" async=""></script><script async="" src="./Coderbyte_CodeNameValid_files/fbevents.js.download"></script><script type="text/javascript" async="" src="./Coderbyte_CodeNameValid_files/insight.min.js.download"></script><script src="./Coderbyte_CodeNameValid_files/vue-2.6.10.min.js.download" type="text/javascript" charset="utf-8"></script>
+<!-- third-party js -->
+<script src="./Coderbyte_CodeNameValid_files/vue-multiselect-2.1.0.min.js.download" type="text/javascript"></script>
+<script src="./Coderbyte_CodeNameValid_files/stickybits.min.js.download"></script>
+<script src="./Coderbyte_CodeNameValid_files/jquery-1.3.2.min.js.download" type="text/javascript" charset="utf-8"></script>
+<script src="./Coderbyte_CodeNameValid_files/jquery.cursorMessage.js.download" charset="utf-8" language="javascript" type="text/javascript"></script> 
+<script src="./Coderbyte_CodeNameValid_files/interact.min.js.download"></script>
+
+<!-- main js -->
+<script src="./Coderbyte_CodeNameValid_files/helper.e84297b092293630.js.download"></script>
+<script src="./Coderbyte_CodeNameValid_files/languages.c615673f02fa11148.js.download"></script>
+<script src="./Coderbyte_CodeNameValid_files/nav-shared.7e35499848a7779.js.download"></script>
+
+<!-- tags/pixels -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./Coderbyte_CodeNameValid_files/js(1)"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-25530908-2');
+  gtag('config', 'AW-961079168');
+</script><script>
+_linkedin_partner_id = "1040524";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script>
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";
+b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=1040524&fmt=gif" />
+</noscript><!-- Facebook Pixel Code -->
+<script>
+if (typeof fbq === 'undefined') {
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '359835818235982'); 
+  fbq('track', 'PageView');
+} else {
+  fbq('track', 'PageView');
+}
+</script>
+<!-- End Facebook Pixel Code --><link href="./Coderbyte_CodeNameValid_files/css" rel="stylesheet">
+<link href="./Coderbyte_CodeNameValid_files/css(1)" rel="stylesheet">
+<link href="./Coderbyte_CodeNameValid_files/css(2)" rel="stylesheet">
+<link href="./Coderbyte_CodeNameValid_files/css(3)" rel="stylesheet">    <script src="./Coderbyte_CodeNameValid_files/socket.io.min.js.download"></script>
+    <!-- include newer jquery version -->
+    <script src="./Coderbyte_CodeNameValid_files/jquery-1.8.3.min.js.download"></script>
+    <script src="./Coderbyte_CodeNameValid_files/jquery.splitter.js.download"></script>
+    <link href="./Coderbyte_CodeNameValid_files/jquery.splitter.css" rel="stylesheet">
+
+    <!-- need to reinclude this because newer jquery version above wipes this from earlier -->
+    <script src="./Coderbyte_CodeNameValid_files/jquery.cursorMessage.js.download" charset="utf-8" language="javascript" type="text/javascript"></script>
+
+    <script type="text/javascript" src="./Coderbyte_CodeNameValid_files/completion-provider.js.download"></script>
+<script type="text/javascript" src="./Coderbyte_CodeNameValid_files/require.min.js.download"></script>
+<script type="text/javascript" src="./Coderbyte_CodeNameValid_files/loader.js.download"></script>
+    <link type="text/css" rel="stylesheet" href="./Coderbyte_CodeNameValid_files/google-search-modal.27601f168dea1937.css">
+    <link type="text/css" rel="stylesheet" href="./Coderbyte_CodeNameValid_files/modal-basic.b364e4e8366411959.css">
+    <link type="text/css" rel="stylesheet" href="./Coderbyte_CodeNameValid_files/editor-fullscreen.c0ea3205b78514312.css">
+    <link type="text/css" rel="stylesheet" href="./Coderbyte_CodeNameValid_files/editor-shared.abf6766751104572.css">
+
+    <!-- for mobile challenges -->
+    <link type="text/css" rel="stylesheet" href="./Coderbyte_CodeNameValid_files/devices.min.css">
+
+    <script>
+      window.__adblock = true;
+      window.__authObject = {"cookieSet":true,"username":"VethaBalan","email":"2019107212vethabalan@gmail.com","profileImage":"https:\/\/s3-us-west-1.amazonaws.com\/coderbyteprofiles\/VethaBalan.jpg"};
+      window.__challengeInfo = {"editor_type":"algorithm","id":"322","challenge_title":"Codeland Username Validation","challenge_description":"Have the function <span style=\"font-family:'Courier New';color:#a21818;\"> CodelandUsernameValidation(<span style=\"font-family:'Courier New';color:#1f5cc3;\"><b>str<\/b><\/span>)<\/span> take the <span style=\"font-family:'Courier New';color:#1f5cc3;\"><b>str<\/b><\/span> \n\nparameter being passed and determine if the string is a valid username according to the following rules: \n<br><br>\n1. The username is between 4 and 25 characters.<br>\n2. It must start with a letter. <br>\n3. It can only contain letters, numbers, and the underscore character. <br>\n4. It cannot end with an underscore character.\n<br><br>\n\nIf the username is valid then your program should return the string <strong>true<\/strong>, otherwise return the string <strong>false<\/strong>.\n","tier":"1","difficulty":"easy","tags":["searching","string manipulation","searching","regular expression","Codeland","free"],"parameter_type":"str","language":"Python3","samples":["\"aa_\"","false","\"u__hello_world123\"","true"],"example_arg":"\"aa_\"","allow_run_test_cases":true,"execute_file":"executeCodeTPS.php","preview_mode":false,"allow_redo":true,"allow_reference_search":true};
+      window.__errorObject = {"error":false};
+      window.__orgInfo = false;
+    </script>
+
+    <!-- check for adblock -->
+    <script src="./Coderbyte_CodeNameValid_files/seo-ads.37d8b6c0ff8519.js.download"></script>
+
+    <!-- add this for ungraded custom challenge filetrees -->
+    <script src="./Coderbyte_CodeNameValid_files/default-code-collab.749b5884205912497.js.download"></script>
+
+    <!-- timer code for candidates -->
+    <script src="./Coderbyte_CodeNameValid_files/timer-countdown.8197533369b91357.js.download"></script>
+
+    <!-- for running code -->
+    <script src="./Coderbyte_CodeNameValid_files/default-code-algs.dcbc5218583416892.js.download"></script>
+    <script src="./Coderbyte_CodeNameValid_files/default-code-frontend.a80b044570d915623.js.download"></script>
+    <script src="./Coderbyte_CodeNameValid_files/default-code-frontend-tests.78c3c6a30b2c38421.js.download"></script>
+    <script src="./Coderbyte_CodeNameValid_files/default-code-language-specific.52badd11e19421400.js.download"></script>
+    <script src="./Coderbyte_CodeNameValid_files/default-code-project-based.b279b871d01481942.js.download"></script>
+    <script src="./Coderbyte_CodeNameValid_files/editor-stdin-replacements.1a9ec9ad089f4166.js.download"></script>
+    <script src="./Coderbyte_CodeNameValid_files/eval-code.2d66105351845967.js.download"></script>
+
+    <!-- main editor functions -->
+    <script src="./Coderbyte_CodeNameValid_files/editor-shared.09faa880171a24640.js.download"></script>
+    <script src="./Coderbyte_CodeNameValid_files/editor-fullscreen.95104b2bf0cc44080.js.download"></script>
+
+    <script src="./Coderbyte_CodeNameValid_files/file-tree.5918372615417788.js.download"></script>
+<link type="text/css" rel="stylesheet" href="./Coderbyte_CodeNameValid_files/file-tree.94ead1085f4b3767.css">
+    
+  <script src="./Coderbyte_CodeNameValid_files/cse_element__en.js.download" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="./Coderbyte_CodeNameValid_files/default+en.css"><link rel="stylesheet" type="text/css" data-name="vs/editor/editor.main" href="./Coderbyte_CodeNameValid_files/editor.main.css"><link type="text/css" rel="stylesheet" href="./Coderbyte_CodeNameValid_files/default.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="vs/editor/editor.main" src="./Coderbyte_CodeNameValid_files/editor.main.js.download"></script><meta http-equiv="origin-trial" content="A751Xsk4ZW3DVQ8WZng2Dk5s3YzAyqncTzgv+VaE6wavgTY0QHkDvUTET1o7HanhuJO8lgv1Vvc88Ij78W1FIAAAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A751Xsk4ZW3DVQ8WZng2Dk5s3YzAyqncTzgv+VaE6wavgTY0QHkDvUTET1o7HanhuJO8lgv1Vvc88Ij78W1FIAAAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script type="text/javascript" async="" src="./Coderbyte_CodeNameValid_files/f.txt"></script><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}.gsc-control-cse{border-color:#FFFFFF;background-color:#FFFFFF}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus{border-color:#DFE1E5}.gsc-search-button-v2,.gsc-search-button-v2:hover,.gsc-search-button-v2:focus{border-color:#3079ED;background-color:#4D90FE;background-image:none;filter:none}.gsc-search-button-v2 svg{fill:#FFFFFF}.gsc-tabHeader.gsc-tabhActive,.gsc-refinementHeader.gsc-refinementhActive{color:#1A73E8;border-color:#1A73E8;background-color:#FFFFFF}.gsc-tabHeader.gsc-tabhInactive,.gsc-refinementHeader.gsc-refinementhInactive{color:#666666;border-color:#666666;background-color:#FFFFFF}.gsc-webResult.gsc-result,.gsc-results .gsc-imageResult{border-color:#FFFFFF;background-color:#FFFFFF}.gsc-webResult.gsc-result:hover{border-color:#FFFFFF;background-color:#FFFFFF}.gs-webResult.gs-result a.gs-title:link,.gs-webResult.gs-result a.gs-title:link b,.gs-imageResult a.gs-title:link,.gs-imageResult a.gs-title:link b{color:#1155CC}.gs-webResult.gs-result a.gs-title:visited,.gs-webResult.gs-result a.gs-title:visited b,.gs-imageResult a.gs-title:visited,.gs-imageResult a.gs-title:visited b{color:#1155CC}.gs-webResult.gs-result a.gs-title:hover,.gs-webResult.gs-result a.gs-title:hover b,.gs-imageResult a.gs-title:hover,.gs-imageResult a.gs-title:hover b{color:#1155CC}.gs-webResult.gs-result a.gs-title:active,.gs-webResult.gs-result a.gs-title:active b,.gs-imageResult a.gs-title:active,.gs-imageResult a.gs-title:active b{color:#1155CC}.gsc-cursor-page{color:#1155CC}a.gsc-trailing-more-results:link{color:#1155CC}.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,.gs-fileFormatType{color:#333333}.gs-webResult div.gs-visibleUrl{color:#009933}.gs-webResult div.gs-visibleUrl-short{color:#009933}.gsc-cursor-box{border-color:#FFFFFF}.gsc-results .gsc-cursor-box .gsc-cursor-page{border-color:#666666;background-color:#FFFFFF;color:#666666}.gsc-results .gsc-cursor-box .gsc-cursor-current-page{border-color:#1A73E8;background-color:#FFFFFF;color:#1A73E8}.gsc-webResult.gsc-result.gsc-promotion{border-color:#FFFFFF;background-color:#F6F6F6}.gsc-completion-title{color:#1155CC}.gsc-completion-snippet{color:#333333}.gs-promotion a.gs-title:link,.gs-promotion a.gs-title:link *,.gs-promotion .gs-snippet a:link{color:#1155CC}.gs-promotion a.gs-title:visited,.gs-promotion a.gs-title:visited *,.gs-promotion .gs-snippet a:visited{color:#1155CC}.gs-promotion a.gs-title:hover,.gs-promotion a.gs-title:hover *,.gs-promotion .gs-snippet a:hover{color:#1155CC}.gs-promotion a.gs-title:active,.gs-promotion a.gs-title:active *,.gs-promotion .gs-snippet a:active{color:#1155CC}.gs-promotion .gs-snippet,.gs-promotion .gs-title .gs-promotion-title-right,.gs-promotion .gs-title .gs-promotion-title-right *{color:#333333}.gs-promotion .gs-visibleUrl,.gs-promotion .gs-visibleUrl-short{color:#009933}.gcsc-find-more-on-google{color:#1155CC}.gcsc-find-more-on-google-magnifier{fill:#1155CC}</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="vs/editor/editor.main.nls" src="./Coderbyte_CodeNameValid_files/editor.main.nls.js.download"></script><style type="text/css" media="screen" class="monaco-colors">.codicon-add:before { content: '\ea60'; }
+.codicon-plus:before { content: '\ea60'; }
+.codicon-gist-new:before { content: '\ea60'; }
+.codicon-repo-create:before { content: '\ea60'; }
+.codicon-lightbulb:before { content: '\ea61'; }
+.codicon-light-bulb:before { content: '\ea61'; }
+.codicon-repo:before { content: '\ea62'; }
+.codicon-repo-delete:before { content: '\ea62'; }
+.codicon-gist-fork:before { content: '\ea63'; }
+.codicon-repo-forked:before { content: '\ea63'; }
+.codicon-git-pull-request:before { content: '\ea64'; }
+.codicon-git-pull-request-abandoned:before { content: '\ea64'; }
+.codicon-record-keys:before { content: '\ea65'; }
+.codicon-keyboard:before { content: '\ea65'; }
+.codicon-tag:before { content: '\ea66'; }
+.codicon-tag-add:before { content: '\ea66'; }
+.codicon-tag-remove:before { content: '\ea66'; }
+.codicon-person:before { content: '\ea67'; }
+.codicon-person-add:before { content: '\ea67'; }
+.codicon-person-follow:before { content: '\ea67'; }
+.codicon-person-outline:before { content: '\ea67'; }
+.codicon-person-filled:before { content: '\ea67'; }
+.codicon-git-branch:before { content: '\ea68'; }
+.codicon-git-branch-create:before { content: '\ea68'; }
+.codicon-git-branch-delete:before { content: '\ea68'; }
+.codicon-source-control:before { content: '\ea68'; }
+.codicon-mirror:before { content: '\ea69'; }
+.codicon-mirror-public:before { content: '\ea69'; }
+.codicon-star:before { content: '\ea6a'; }
+.codicon-star-add:before { content: '\ea6a'; }
+.codicon-star-delete:before { content: '\ea6a'; }
+.codicon-star-empty:before { content: '\ea6a'; }
+.codicon-comment:before { content: '\ea6b'; }
+.codicon-comment-add:before { content: '\ea6b'; }
+.codicon-alert:before { content: '\ea6c'; }
+.codicon-warning:before { content: '\ea6c'; }
+.codicon-search:before { content: '\ea6d'; }
+.codicon-search-save:before { content: '\ea6d'; }
+.codicon-log-out:before { content: '\ea6e'; }
+.codicon-sign-out:before { content: '\ea6e'; }
+.codicon-log-in:before { content: '\ea6f'; }
+.codicon-sign-in:before { content: '\ea6f'; }
+.codicon-eye:before { content: '\ea70'; }
+.codicon-eye-unwatch:before { content: '\ea70'; }
+.codicon-eye-watch:before { content: '\ea70'; }
+.codicon-circle-filled:before { content: '\ea71'; }
+.codicon-primitive-dot:before { content: '\ea71'; }
+.codicon-close-dirty:before { content: '\ea71'; }
+.codicon-debug-breakpoint:before { content: '\ea71'; }
+.codicon-debug-breakpoint-disabled:before { content: '\ea71'; }
+.codicon-debug-hint:before { content: '\ea71'; }
+.codicon-primitive-square:before { content: '\ea72'; }
+.codicon-edit:before { content: '\ea73'; }
+.codicon-pencil:before { content: '\ea73'; }
+.codicon-info:before { content: '\ea74'; }
+.codicon-issue-opened:before { content: '\ea74'; }
+.codicon-gist-private:before { content: '\ea75'; }
+.codicon-git-fork-private:before { content: '\ea75'; }
+.codicon-lock:before { content: '\ea75'; }
+.codicon-mirror-private:before { content: '\ea75'; }
+.codicon-close:before { content: '\ea76'; }
+.codicon-remove-close:before { content: '\ea76'; }
+.codicon-x:before { content: '\ea76'; }
+.codicon-repo-sync:before { content: '\ea77'; }
+.codicon-sync:before { content: '\ea77'; }
+.codicon-clone:before { content: '\ea78'; }
+.codicon-desktop-download:before { content: '\ea78'; }
+.codicon-beaker:before { content: '\ea79'; }
+.codicon-microscope:before { content: '\ea79'; }
+.codicon-vm:before { content: '\ea7a'; }
+.codicon-device-desktop:before { content: '\ea7a'; }
+.codicon-file:before { content: '\ea7b'; }
+.codicon-file-text:before { content: '\ea7b'; }
+.codicon-more:before { content: '\ea7c'; }
+.codicon-ellipsis:before { content: '\ea7c'; }
+.codicon-kebab-horizontal:before { content: '\ea7c'; }
+.codicon-mail-reply:before { content: '\ea7d'; }
+.codicon-reply:before { content: '\ea7d'; }
+.codicon-organization:before { content: '\ea7e'; }
+.codicon-organization-filled:before { content: '\ea7e'; }
+.codicon-organization-outline:before { content: '\ea7e'; }
+.codicon-new-file:before { content: '\ea7f'; }
+.codicon-file-add:before { content: '\ea7f'; }
+.codicon-new-folder:before { content: '\ea80'; }
+.codicon-file-directory-create:before { content: '\ea80'; }
+.codicon-trash:before { content: '\ea81'; }
+.codicon-trashcan:before { content: '\ea81'; }
+.codicon-history:before { content: '\ea82'; }
+.codicon-clock:before { content: '\ea82'; }
+.codicon-folder:before { content: '\ea83'; }
+.codicon-file-directory:before { content: '\ea83'; }
+.codicon-symbol-folder:before { content: '\ea83'; }
+.codicon-logo-github:before { content: '\ea84'; }
+.codicon-mark-github:before { content: '\ea84'; }
+.codicon-github:before { content: '\ea84'; }
+.codicon-terminal:before { content: '\ea85'; }
+.codicon-console:before { content: '\ea85'; }
+.codicon-repl:before { content: '\ea85'; }
+.codicon-zap:before { content: '\ea86'; }
+.codicon-symbol-event:before { content: '\ea86'; }
+.codicon-error:before { content: '\ea87'; }
+.codicon-stop:before { content: '\ea87'; }
+.codicon-variable:before { content: '\ea88'; }
+.codicon-symbol-variable:before { content: '\ea88'; }
+.codicon-array:before { content: '\ea8a'; }
+.codicon-symbol-array:before { content: '\ea8a'; }
+.codicon-symbol-module:before { content: '\ea8b'; }
+.codicon-symbol-package:before { content: '\ea8b'; }
+.codicon-symbol-namespace:before { content: '\ea8b'; }
+.codicon-symbol-object:before { content: '\ea8b'; }
+.codicon-symbol-method:before { content: '\ea8c'; }
+.codicon-symbol-function:before { content: '\ea8c'; }
+.codicon-symbol-constructor:before { content: '\ea8c'; }
+.codicon-symbol-boolean:before { content: '\ea8f'; }
+.codicon-symbol-null:before { content: '\ea8f'; }
+.codicon-symbol-numeric:before { content: '\ea90'; }
+.codicon-symbol-number:before { content: '\ea90'; }
+.codicon-symbol-structure:before { content: '\ea91'; }
+.codicon-symbol-struct:before { content: '\ea91'; }
+.codicon-symbol-parameter:before { content: '\ea92'; }
+.codicon-symbol-type-parameter:before { content: '\ea92'; }
+.codicon-symbol-key:before { content: '\ea93'; }
+.codicon-symbol-text:before { content: '\ea93'; }
+.codicon-symbol-reference:before { content: '\ea94'; }
+.codicon-go-to-file:before { content: '\ea94'; }
+.codicon-symbol-enum:before { content: '\ea95'; }
+.codicon-symbol-value:before { content: '\ea95'; }
+.codicon-symbol-ruler:before { content: '\ea96'; }
+.codicon-symbol-unit:before { content: '\ea96'; }
+.codicon-activate-breakpoints:before { content: '\ea97'; }
+.codicon-archive:before { content: '\ea98'; }
+.codicon-arrow-both:before { content: '\ea99'; }
+.codicon-arrow-down:before { content: '\ea9a'; }
+.codicon-arrow-left:before { content: '\ea9b'; }
+.codicon-arrow-right:before { content: '\ea9c'; }
+.codicon-arrow-small-down:before { content: '\ea9d'; }
+.codicon-arrow-small-left:before { content: '\ea9e'; }
+.codicon-arrow-small-right:before { content: '\ea9f'; }
+.codicon-arrow-small-up:before { content: '\eaa0'; }
+.codicon-arrow-up:before { content: '\eaa1'; }
+.codicon-bell:before { content: '\eaa2'; }
+.codicon-bold:before { content: '\eaa3'; }
+.codicon-book:before { content: '\eaa4'; }
+.codicon-bookmark:before { content: '\eaa5'; }
+.codicon-debug-breakpoint-conditional-unverified:before { content: '\eaa6'; }
+.codicon-debug-breakpoint-conditional:before { content: '\eaa7'; }
+.codicon-debug-breakpoint-conditional-disabled:before { content: '\eaa7'; }
+.codicon-debug-breakpoint-data-unverified:before { content: '\eaa8'; }
+.codicon-debug-breakpoint-data:before { content: '\eaa9'; }
+.codicon-debug-breakpoint-data-disabled:before { content: '\eaa9'; }
+.codicon-debug-breakpoint-log-unverified:before { content: '\eaaa'; }
+.codicon-debug-breakpoint-log:before { content: '\eaab'; }
+.codicon-debug-breakpoint-log-disabled:before { content: '\eaab'; }
+.codicon-briefcase:before { content: '\eaac'; }
+.codicon-broadcast:before { content: '\eaad'; }
+.codicon-browser:before { content: '\eaae'; }
+.codicon-bug:before { content: '\eaaf'; }
+.codicon-calendar:before { content: '\eab0'; }
+.codicon-case-sensitive:before { content: '\eab1'; }
+.codicon-check:before { content: '\eab2'; }
+.codicon-checklist:before { content: '\eab3'; }
+.codicon-chevron-down:before { content: '\eab4'; }
+.codicon-chevron-left:before { content: '\eab5'; }
+.codicon-chevron-right:before { content: '\eab6'; }
+.codicon-chevron-up:before { content: '\eab7'; }
+.codicon-chrome-close:before { content: '\eab8'; }
+.codicon-chrome-maximize:before { content: '\eab9'; }
+.codicon-chrome-minimize:before { content: '\eaba'; }
+.codicon-chrome-restore:before { content: '\eabb'; }
+.codicon-circle-outline:before { content: '\eabc'; }
+.codicon-debug-breakpoint-unverified:before { content: '\eabc'; }
+.codicon-circle-slash:before { content: '\eabd'; }
+.codicon-circuit-board:before { content: '\eabe'; }
+.codicon-clear-all:before { content: '\eabf'; }
+.codicon-clippy:before { content: '\eac0'; }
+.codicon-close-all:before { content: '\eac1'; }
+.codicon-cloud-download:before { content: '\eac2'; }
+.codicon-cloud-upload:before { content: '\eac3'; }
+.codicon-code:before { content: '\eac4'; }
+.codicon-collapse-all:before { content: '\eac5'; }
+.codicon-color-mode:before { content: '\eac6'; }
+.codicon-comment-discussion:before { content: '\eac7'; }
+.codicon-compare-changes:before { content: '\eafd'; }
+.codicon-credit-card:before { content: '\eac9'; }
+.codicon-dash:before { content: '\eacc'; }
+.codicon-dashboard:before { content: '\eacd'; }
+.codicon-database:before { content: '\eace'; }
+.codicon-debug-continue:before { content: '\eacf'; }
+.codicon-debug-disconnect:before { content: '\ead0'; }
+.codicon-debug-pause:before { content: '\ead1'; }
+.codicon-debug-restart:before { content: '\ead2'; }
+.codicon-debug-start:before { content: '\ead3'; }
+.codicon-debug-step-into:before { content: '\ead4'; }
+.codicon-debug-step-out:before { content: '\ead5'; }
+.codicon-debug-step-over:before { content: '\ead6'; }
+.codicon-debug-stop:before { content: '\ead7'; }
+.codicon-debug:before { content: '\ead8'; }
+.codicon-device-camera-video:before { content: '\ead9'; }
+.codicon-device-camera:before { content: '\eada'; }
+.codicon-device-mobile:before { content: '\eadb'; }
+.codicon-diff-added:before { content: '\eadc'; }
+.codicon-diff-ignored:before { content: '\eadd'; }
+.codicon-diff-modified:before { content: '\eade'; }
+.codicon-diff-removed:before { content: '\eadf'; }
+.codicon-diff-renamed:before { content: '\eae0'; }
+.codicon-diff:before { content: '\eae1'; }
+.codicon-discard:before { content: '\eae2'; }
+.codicon-editor-layout:before { content: '\eae3'; }
+.codicon-empty-window:before { content: '\eae4'; }
+.codicon-exclude:before { content: '\eae5'; }
+.codicon-extensions:before { content: '\eae6'; }
+.codicon-eye-closed:before { content: '\eae7'; }
+.codicon-file-binary:before { content: '\eae8'; }
+.codicon-file-code:before { content: '\eae9'; }
+.codicon-file-media:before { content: '\eaea'; }
+.codicon-file-pdf:before { content: '\eaeb'; }
+.codicon-file-submodule:before { content: '\eaec'; }
+.codicon-file-symlink-directory:before { content: '\eaed'; }
+.codicon-file-symlink-file:before { content: '\eaee'; }
+.codicon-file-zip:before { content: '\eaef'; }
+.codicon-files:before { content: '\eaf0'; }
+.codicon-filter:before { content: '\eaf1'; }
+.codicon-flame:before { content: '\eaf2'; }
+.codicon-fold-down:before { content: '\eaf3'; }
+.codicon-fold-up:before { content: '\eaf4'; }
+.codicon-fold:before { content: '\eaf5'; }
+.codicon-folder-active:before { content: '\eaf6'; }
+.codicon-folder-opened:before { content: '\eaf7'; }
+.codicon-gear:before { content: '\eaf8'; }
+.codicon-gift:before { content: '\eaf9'; }
+.codicon-gist-secret:before { content: '\eafa'; }
+.codicon-gist:before { content: '\eafb'; }
+.codicon-git-commit:before { content: '\eafc'; }
+.codicon-git-compare:before { content: '\eafd'; }
+.codicon-git-merge:before { content: '\eafe'; }
+.codicon-github-action:before { content: '\eaff'; }
+.codicon-github-alt:before { content: '\eb00'; }
+.codicon-globe:before { content: '\eb01'; }
+.codicon-grabber:before { content: '\eb02'; }
+.codicon-graph:before { content: '\eb03'; }
+.codicon-gripper:before { content: '\eb04'; }
+.codicon-heart:before { content: '\eb05'; }
+.codicon-home:before { content: '\eb06'; }
+.codicon-horizontal-rule:before { content: '\eb07'; }
+.codicon-hubot:before { content: '\eb08'; }
+.codicon-inbox:before { content: '\eb09'; }
+.codicon-issue-closed:before { content: '\eb0a'; }
+.codicon-issue-reopened:before { content: '\eb0b'; }
+.codicon-issues:before { content: '\eb0c'; }
+.codicon-italic:before { content: '\eb0d'; }
+.codicon-jersey:before { content: '\eb0e'; }
+.codicon-json:before { content: '\eb0f'; }
+.codicon-kebab-vertical:before { content: '\eb10'; }
+.codicon-key:before { content: '\eb11'; }
+.codicon-law:before { content: '\eb12'; }
+.codicon-lightbulb-autofix:before { content: '\eb13'; }
+.codicon-link-external:before { content: '\eb14'; }
+.codicon-link:before { content: '\eb15'; }
+.codicon-list-ordered:before { content: '\eb16'; }
+.codicon-list-unordered:before { content: '\eb17'; }
+.codicon-live-share:before { content: '\eb18'; }
+.codicon-loading:before { content: '\eb19'; }
+.codicon-location:before { content: '\eb1a'; }
+.codicon-mail-read:before { content: '\eb1b'; }
+.codicon-mail:before { content: '\eb1c'; }
+.codicon-markdown:before { content: '\eb1d'; }
+.codicon-megaphone:before { content: '\eb1e'; }
+.codicon-mention:before { content: '\eb1f'; }
+.codicon-milestone:before { content: '\eb20'; }
+.codicon-mortar-board:before { content: '\eb21'; }
+.codicon-move:before { content: '\eb22'; }
+.codicon-multiple-windows:before { content: '\eb23'; }
+.codicon-mute:before { content: '\eb24'; }
+.codicon-no-newline:before { content: '\eb25'; }
+.codicon-note:before { content: '\eb26'; }
+.codicon-octoface:before { content: '\eb27'; }
+.codicon-open-preview:before { content: '\eb28'; }
+.codicon-package:before { content: '\eb29'; }
+.codicon-paintcan:before { content: '\eb2a'; }
+.codicon-pin:before { content: '\eb2b'; }
+.codicon-play:before { content: '\eb2c'; }
+.codicon-run:before { content: '\eb2c'; }
+.codicon-plug:before { content: '\eb2d'; }
+.codicon-preserve-case:before { content: '\eb2e'; }
+.codicon-preview:before { content: '\eb2f'; }
+.codicon-project:before { content: '\eb30'; }
+.codicon-pulse:before { content: '\eb31'; }
+.codicon-question:before { content: '\eb32'; }
+.codicon-quote:before { content: '\eb33'; }
+.codicon-radio-tower:before { content: '\eb34'; }
+.codicon-reactions:before { content: '\eb35'; }
+.codicon-references:before { content: '\eb36'; }
+.codicon-refresh:before { content: '\eb37'; }
+.codicon-regex:before { content: '\eb38'; }
+.codicon-remote-explorer:before { content: '\eb39'; }
+.codicon-remote:before { content: '\eb3a'; }
+.codicon-remove:before { content: '\eb3b'; }
+.codicon-replace-all:before { content: '\eb3c'; }
+.codicon-replace:before { content: '\eb3d'; }
+.codicon-repo-clone:before { content: '\eb3e'; }
+.codicon-repo-force-push:before { content: '\eb3f'; }
+.codicon-repo-pull:before { content: '\eb40'; }
+.codicon-repo-push:before { content: '\eb41'; }
+.codicon-report:before { content: '\eb42'; }
+.codicon-request-changes:before { content: '\eb43'; }
+.codicon-rocket:before { content: '\eb44'; }
+.codicon-root-folder-opened:before { content: '\eb45'; }
+.codicon-root-folder:before { content: '\eb46'; }
+.codicon-rss:before { content: '\eb47'; }
+.codicon-ruby:before { content: '\eb48'; }
+.codicon-save-all:before { content: '\eb49'; }
+.codicon-save-as:before { content: '\eb4a'; }
+.codicon-save:before { content: '\eb4b'; }
+.codicon-screen-full:before { content: '\eb4c'; }
+.codicon-screen-normal:before { content: '\eb4d'; }
+.codicon-search-stop:before { content: '\eb4e'; }
+.codicon-server:before { content: '\eb50'; }
+.codicon-settings-gear:before { content: '\eb51'; }
+.codicon-settings:before { content: '\eb52'; }
+.codicon-shield:before { content: '\eb53'; }
+.codicon-smiley:before { content: '\eb54'; }
+.codicon-sort-precedence:before { content: '\eb55'; }
+.codicon-split-horizontal:before { content: '\eb56'; }
+.codicon-split-vertical:before { content: '\eb57'; }
+.codicon-squirrel:before { content: '\eb58'; }
+.codicon-star-full:before { content: '\eb59'; }
+.codicon-star-half:before { content: '\eb5a'; }
+.codicon-symbol-class:before { content: '\eb5b'; }
+.codicon-symbol-color:before { content: '\eb5c'; }
+.codicon-symbol-constant:before { content: '\eb5d'; }
+.codicon-symbol-enum-member:before { content: '\eb5e'; }
+.codicon-symbol-field:before { content: '\eb5f'; }
+.codicon-symbol-file:before { content: '\eb60'; }
+.codicon-symbol-interface:before { content: '\eb61'; }
+.codicon-symbol-keyword:before { content: '\eb62'; }
+.codicon-symbol-misc:before { content: '\eb63'; }
+.codicon-symbol-operator:before { content: '\eb64'; }
+.codicon-symbol-property:before { content: '\eb65'; }
+.codicon-wrench:before { content: '\eb65'; }
+.codicon-wrench-subaction:before { content: '\eb65'; }
+.codicon-symbol-snippet:before { content: '\eb66'; }
+.codicon-tasklist:before { content: '\eb67'; }
+.codicon-telescope:before { content: '\eb68'; }
+.codicon-text-size:before { content: '\eb69'; }
+.codicon-three-bars:before { content: '\eb6a'; }
+.codicon-thumbsdown:before { content: '\eb6b'; }
+.codicon-thumbsup:before { content: '\eb6c'; }
+.codicon-tools:before { content: '\eb6d'; }
+.codicon-triangle-down:before { content: '\eb6e'; }
+.codicon-triangle-left:before { content: '\eb6f'; }
+.codicon-triangle-right:before { content: '\eb70'; }
+.codicon-triangle-up:before { content: '\eb71'; }
+.codicon-twitter:before { content: '\eb72'; }
+.codicon-unfold:before { content: '\eb73'; }
+.codicon-unlock:before { content: '\eb74'; }
+.codicon-unmute:before { content: '\eb75'; }
+.codicon-unverified:before { content: '\eb76'; }
+.codicon-verified:before { content: '\eb77'; }
+.codicon-versions:before { content: '\eb78'; }
+.codicon-vm-active:before { content: '\eb79'; }
+.codicon-vm-outline:before { content: '\eb7a'; }
+.codicon-vm-running:before { content: '\eb7b'; }
+.codicon-watch:before { content: '\eb7c'; }
+.codicon-whitespace:before { content: '\eb7d'; }
+.codicon-whole-word:before { content: '\eb7e'; }
+.codicon-window:before { content: '\eb7f'; }
+.codicon-word-wrap:before { content: '\eb80'; }
+.codicon-zoom-in:before { content: '\eb81'; }
+.codicon-zoom-out:before { content: '\eb82'; }
+.codicon-list-filter:before { content: '\eb83'; }
+.codicon-list-flat:before { content: '\eb84'; }
+.codicon-list-selection:before { content: '\eb85'; }
+.codicon-selection:before { content: '\eb85'; }
+.codicon-list-tree:before { content: '\eb86'; }
+.codicon-debug-breakpoint-function-unverified:before { content: '\eb87'; }
+.codicon-debug-breakpoint-function:before { content: '\eb88'; }
+.codicon-debug-breakpoint-function-disabled:before { content: '\eb88'; }
+.codicon-debug-stackframe-active:before { content: '\eb89'; }
+.codicon-debug-stackframe-dot:before { content: '\eb8a'; }
+.codicon-debug-stackframe:before { content: '\eb8b'; }
+.codicon-debug-stackframe-focused:before { content: '\eb8b'; }
+.codicon-debug-breakpoint-unsupported:before { content: '\eb8c'; }
+.codicon-symbol-string:before { content: '\eb8d'; }
+.codicon-debug-reverse-continue:before { content: '\eb8e'; }
+.codicon-debug-step-back:before { content: '\eb8f'; }
+.codicon-debug-restart-frame:before { content: '\eb90'; }
+.codicon-call-incoming:before { content: '\eb92'; }
+.codicon-call-outgoing:before { content: '\eb93'; }
+.codicon-menu:before { content: '\eb94'; }
+.codicon-expand-all:before { content: '\eb95'; }
+.codicon-feedback:before { content: '\eb96'; }
+.codicon-group-by-ref-type:before { content: '\eb97'; }
+.codicon-ungroup-by-ref-type:before { content: '\eb98'; }
+.codicon-account:before { content: '\eb99'; }
+.codicon-bell-dot:before { content: '\eb9a'; }
+.codicon-debug-console:before { content: '\eb9b'; }
+.codicon-library:before { content: '\eb9c'; }
+.codicon-output:before { content: '\eb9d'; }
+.codicon-run-all:before { content: '\eb9e'; }
+.codicon-sync-ignored:before { content: '\eb9f'; }
+.codicon-pinned:before { content: '\eba0'; }
+.codicon-github-inverted:before { content: '\eba1'; }
+.codicon-debug-alt:before { content: '\eb91'; }
+.codicon-server-process:before { content: '\eba2'; }
+.codicon-server-environment:before { content: '\eba3'; }
+.codicon-pass:before { content: '\eba4'; }
+.codicon-stop-circle:before { content: '\eba5'; }
+.codicon-play-circle:before { content: '\eba6'; }
+.codicon-record:before { content: '\eba7'; }
+.codicon-debug-alt-small:before { content: '\eba8'; }
+.codicon-vm-connect:before { content: '\eba9'; }
+.codicon-cloud:before { content: '\ebaa'; }
+.codicon-merge:before { content: '\ebab'; }
+.codicon-export:before { content: '\ebac'; }
+.codicon-graph-left:before { content: '\ebad'; }
+.codicon-magnet:before { content: '\ebae'; }
+.codicon-notebook:before { content: '\ebaf'; }
+.codicon-redo:before { content: '\ebb0'; }
+.codicon-check-all:before { content: '\ebb1'; }
+.codicon-pinned-dirty:before { content: '\ebb2'; }
+.codicon-pass-filled:before { content: '\ebb3'; }
+.codicon-circle-large-filled:before { content: '\ebb4'; }
+.codicon-circle-large-outline:before { content: '\ebb5'; }
+.codicon-combine:before { content: '\ebb6'; }
+.codicon-gather:before { content: '\ebb6'; }
+.codicon-table:before { content: '\ebb7'; }
+.codicon-variable-group:before { content: '\ebb8'; }
+.codicon-type-hierarchy:before { content: '\ebb9'; }
+.codicon-type-hierarchy-sub:before { content: '\ebba'; }
+.codicon-type-hierarchy-super:before { content: '\ebbb'; }
+.codicon-git-pull-request-create:before { content: '\ebbc'; }
+.codicon-run-above:before { content: '\ebbd'; }
+.codicon-run-below:before { content: '\ebbe'; }
+.codicon-notebook-template:before { content: '\ebbf'; }
+.codicon-debug-rerun:before { content: '\ebc0'; }
+.codicon-drop-down-button:before { content: '\eab4'; }
+.codicon-scrollbar-button-left:before { content: '\eb6f'; }
+.codicon-scrollbar-button-right:before { content: '\eb70'; }
+.codicon-scrollbar-button-up:before { content: '\eb71'; }
+.codicon-scrollbar-button-down:before { content: '\eb6e'; }
+.codicon-tree-item-expanded:before { content: '\eab4'; }
+.codicon-tree-filter-on-type-on:before { content: '\eb83'; }
+.codicon-tree-filter-on-type-off:before { content: '\eb85'; }
+.codicon-tree-filter-clear:before { content: '\ea76'; }
+.codicon-tree-item-loading:before { content: '\eb19'; }
+.codicon-widget-close:before { content: '\ea76'; }
+.codicon-diff-review-insert:before { content: '\ea60'; }
+.codicon-diff-review-remove:before { content: '\eb3b'; }
+.codicon-diff-review-close:before { content: '\ea76'; }
+.codicon-diff-insert:before { content: '\ea60'; }
+.codicon-diff-remove:before { content: '\eb3b'; }
+.codicon-menu-selection:before { content: '\eab2'; }
+.codicon-menu-submenu:before { content: '\eab6'; }
+.codicon-quick-input-back:before { content: '\ea9b'; }
+.codicon-marker-navigation-next:before { content: '\eab4'; }
+.codicon-marker-navigation-previous:before { content: '\eab7'; }
+.codicon-find-selection:before { content: '\eb85'; }
+.codicon-find-collapsed:before { content: '\eab6'; }
+.codicon-find-expanded:before { content: '\eab4'; }
+.codicon-find-replace:before { content: '\eb3d'; }
+.codicon-find-replace-all:before { content: '\eb3c'; }
+.codicon-find-previous-match:before { content: '\eaa1'; }
+.codicon-find-next-match:before { content: '\ea9a'; }
+.codicon-folding-expanded:before { content: '\eab4'; }
+.codicon-folding-collapsed:before { content: '\eab6'; }
+.codicon-parameter-hints-next:before { content: '\eab4'; }
+.codicon-parameter-hints-previous:before { content: '\eab7'; }
+.codicon-suggest-more-info:before { content: '\eab6'; }
+.monaco-editor, .monaco-editor-background, .monaco-editor .inputarea.ime-input { background-color: #fffffe; }
+.monaco-editor, .monaco-editor .inputarea.ime-input { color: #000000; }
+.monaco-editor .margin { background-color: #fffffe; }
+.monaco-editor .rangeHighlight { background-color: rgba(253, 255, 0, 0.2); }
+.monaco-editor .symbolHighlight { background-color: rgba(234, 92, 0, 0.33); }
+.monaco-editor .mtkw { color: rgba(51, 51, 51, 0.2) !important; }
+.monaco-editor .mtkz { color: rgba(51, 51, 51, 0.2) !important; }
+.monaco-editor .line-numbers { color: #237893; }
+.monaco-editor .line-numbers.active-line-number { color: #0b216f; }
+.monaco-editor .view-overlays .current-line { border: 2px solid #eeeeee; }
+.monaco-editor .margin-view-overlays .current-line-margin { border: 2px solid #eeeeee; }
+.monaco-editor .lines-content .cigr { box-shadow: 1px 0 0 0 #d3d3d3 inset; }
+.monaco-editor .lines-content .cigra { box-shadow: 1px 0 0 0 #939393 inset; }
+.monaco-editor .view-ruler { box-shadow: 1px 0 0 0 #d3d3d3 inset; }
+.monaco-editor .cursors-layer .cursor { background-color: #000000; border-color: #000000; color: #ffffff; }
+.monaco-editor .minimap-slider .minimap-slider-horizontal { background: rgba(100, 100, 100, 0.2); }
+.monaco-editor .minimap-slider:hover .minimap-slider-horizontal { background: rgba(100, 100, 100, 0.35); }
+.monaco-editor .minimap-slider.active .minimap-slider-horizontal { background: rgba(0, 0, 0, 0.3); }
+.monaco-editor .minimap-shadow-visible { box-shadow: #dddddd -6px 0 6px -6px inset; }
+.monaco-editor .scroll-decoration { box-shadow: #dddddd 0 6px 6px -6px inset; }
+.monaco-editor .focused .selected-text { background-color: #add6ff; }
+.monaco-editor .selected-text { background-color: #e5ebf1; }
+.monaco-editor .codelens-decoration { color: #999999; }
+.monaco-editor .codelens-decoration .codicon { color: #999999; }
+.monaco-editor .codelens-decoration > a:hover { color: #0000ff !important; }
+.monaco-editor .codelens-decoration > a:hover .codicon { color: #0000ff !important; }
+
+			.monaco-editor .zone-widget .codicon.codicon-error,
+			.markers-panel .marker-icon.codicon.codicon-error,
+			.extensions-viewlet > .extensions .codicon.codicon-error {
+				color: #e51400;
+			}
+		
+
+			.monaco-editor .zone-widget .codicon.codicon-warning,
+			.markers-panel .marker-icon.codicon.codicon-warning,
+			.extensions-viewlet > .extensions .codicon.codicon-warning,
+			.extension-editor .codicon.codicon-warning {
+				color: #bf8803;
+			}
+		
+
+			.monaco-editor .zone-widget .codicon.codicon-info,
+			.markers-panel .marker-icon.codicon.codicon-info,
+			.extensions-viewlet > .extensions .codicon.codicon-info,
+			.extension-editor .codicon.codicon-info {
+				color: #75beff;
+			}
+		
+.monaco-editor .tokens-inspect-widget { border: 1px solid #c8c8c8; }
+.monaco-editor .tokens-inspect-widget .tokens-inspect-separator { background-color: #c8c8c8; }
+.monaco-editor .tokens-inspect-widget { background-color: #f3f3f3; }
+.monaco-editor .tokens-inspect-widget { color: #616161; }
+.monaco-editor .squiggly-error { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23e51400'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-warning { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23bf8803'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-info { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%2375beff'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-hint { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%223%22%20width%3D%2212%22%3E%3Cg%20fill%3D%22%236c6c6c%22%3E%3Ccircle%20cx%3D%221%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%229%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat bottom left; }
+.monaco-editor.showUnused .squiggly-inline-unnecessary { opacity: 0.467; }
+.monaco-editor.showDeprecated .squiggly-inline-deprecated { text-decoration: line-through; text-decoration-color: #000000}
+.monaco-diff-editor .diff-review-line-number { color: #237893; }
+.monaco-diff-editor .diff-review-shadow { box-shadow: #dddddd 0 -6px 6px -6px inset; }
+.monaco-editor .line-insert, .monaco-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-diff-editor .line-insert, .monaco-diff-editor .char-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .inline-added-margin-view-zone { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .line-delete, .monaco-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor .line-delete, .monaco-diff-editor .char-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-editor .inline-deleted-margin-view-zone { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor.side-by-side .editor.modified { box-shadow: -6px 0 5px -5px #dddddd; }
+
+			.monaco-diff-editor .diffViewport {
+				background: rgba(100, 100, 100, 0.4);
+			}
+		
+
+			.monaco-diff-editor .diffViewport:hover {
+				background: rgba(100, 100, 100, 0.7);
+			}
+		
+
+			.monaco-diff-editor .diffViewport:active {
+				background: rgba(0, 0, 0, 0.6);
+			}
+		
+
+	.monaco-editor .diagonal-fill {
+		background-image: linear-gradient(
+			-45deg,
+			rgba(34, 34, 34, 0.2) 12.5%,
+			#0000 12.5%, #0000 50%,
+			rgba(34, 34, 34, 0.2) 50%, rgba(34, 34, 34, 0.2) 62.5%,
+			#0000 62.5%, #0000 100%
+		);
+		background-size: 8px 8px;
+	}
+	
+.monaco-editor .bracket-match { background-color: rgba(0, 100, 0, 0.1); }
+.monaco-editor .bracket-match { border: 1px solid #b9b9b9; }
+.monaco-editor .monaco-editor-overlaymessage .anchor.below { border-top-color: #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .anchor.top { border-bottom-color: #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { border: 1px solid #007acc; }
+.monaco-editor .monaco-editor-overlaymessage .message { background-color: #d6ecf2; }
+
+		.monaco-editor .contentWidgets .codicon.codicon-light-bulb {
+			color: #ddb100;
+			background-color: rgba(255, 255, 254, 0.7);
+		}
+
+		.monaco-editor .contentWidgets .codicon.codicon-lightbulb-autofix {
+			color: #007acc;
+			background-color: rgba(255, 255, 254, 0.7);
+		}
+.monaco-editor .marker-widget a { color: #006ab1; }
+.monaco-editor .marker-widget a.code-link span:hover { color: #006ab1; }
+.monaco-hover .hover-contents a.code-link span:hover { color: #006ab1; }
+.monaco-editor .reference-zone-widget .ref-tree .referenceMatch .highlight { background-color: rgba(234, 92, 0, 0.3); }
+.monaco-editor .reference-zone-widget .preview .reference-decoration { background-color: rgba(245, 216, 2, 0.87); }
+.monaco-editor .reference-zone-widget .ref-tree { background-color: #f3f3f3; }
+.monaco-editor .reference-zone-widget .ref-tree { color: #646465; }
+.monaco-editor .reference-zone-widget .ref-tree .reference-file { color: #1e1e1e; }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .monaco-list-rows > .monaco-list-row.selected:not(.highlighted) { background-color: rgba(51, 153, 255, 0.2); }
+.monaco-editor .reference-zone-widget .ref-tree .monaco-list:focus .monaco-list-rows > .monaco-list-row.selected:not(.highlighted) { color: #6c6c6c !important; }
+.monaco-editor .reference-zone-widget .preview .monaco-editor .monaco-editor-background,.monaco-editor .reference-zone-widget .preview .monaco-editor .inputarea.ime-input {	background-color: #f2f8fc;}
+.monaco-editor .reference-zone-widget .preview .monaco-editor .margin {	background-color: #f2f8fc;}
+.monaco-editor .goto-definition-link { color: #0000ff !important; }
+.monaco-editor .hoverHighlight { background-color: rgba(173, 214, 255, 0.15); }
+.monaco-editor .monaco-hover { background-color: #f3f3f3; }
+.monaco-editor .monaco-hover { border: 1px solid #c8c8c8; }
+.monaco-editor .monaco-hover .hover-row:not(:first-child):not(:empty) { border-top: 1px solid rgba(200, 200, 200, 0.5); }
+.monaco-editor .monaco-hover hr { border-top: 1px solid rgba(200, 200, 200, 0.5); }
+.monaco-editor .monaco-hover hr { border-bottom: 0px solid rgba(200, 200, 200, 0.5); }
+.monaco-editor .monaco-hover a { color: #006ab1; }
+.monaco-editor .monaco-hover { color: #616161; }
+.monaco-editor .monaco-hover .hover-row .actions { background-color: #e7e7e7; }
+.monaco-editor .monaco-hover code { background-color: rgba(220, 220, 220, 0.4); }
+.monaco-editor .findOptionsWidget { background-color: #f3f3f3; }
+.monaco-editor .findOptionsWidget { color: #616161; }
+.monaco-editor .findOptionsWidget { box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.16); }
+.monaco-editor .findMatch { background-color: rgba(234, 92, 0, 0.33); }
+.monaco-editor .currentFindMatch { background-color: #a8ac94; }
+.monaco-editor .findScope { background-color: rgba(180, 180, 180, 0.3); }
+.monaco-editor .find-widget { background-color: #f3f3f3; }
+.monaco-editor .find-widget { box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.16); }
+.monaco-editor .find-widget { color: #616161; }
+.monaco-editor .find-widget.no-results .matchesCount { color: #a1260d; }
+.monaco-editor .find-widget .monaco-sash { background-color: #c8c8c8; }
+.monaco-editor .find-widget .monaco-inputbox.synthetic-focus { outline-color: #0090f1; }
+.monaco-editor .folded-background { background-color: rgba(173, 214, 255, 0.3); }
+
+		.monaco-editor .cldr.codicon.codicon-folding-expanded,
+		.monaco-editor .cldr.codicon.codicon-folding-collapsed {
+			color: #424242 !important;
+		}
+		
+.monaco-editor.vs .valueSetReplacement { outline: solid 2px #b9b9b9; }
+.monaco-editor .linked-editing-decoration { background: rgba(255, 0, 0, 0.3); border-left-color: rgba(255, 0, 0, 0.3); }
+.monaco-editor .detected-link-active { color: #0000ff !important; }
+.monaco-editor .parameter-hints-widget { border: 1px solid #c8c8c8; }
+.monaco-editor .parameter-hints-widget.multiple .body { border-left: 1px solid rgba(200, 200, 200, 0.5); }
+.monaco-editor .parameter-hints-widget .signature.has-docs { border-bottom: 1px solid rgba(200, 200, 200, 0.5); }
+.monaco-editor .parameter-hints-widget { background-color: #f3f3f3; }
+.monaco-editor .parameter-hints-widget a { color: #006ab1; }
+.monaco-editor .parameter-hints-widget { color: #616161; }
+.monaco-editor .parameter-hints-widget code { background-color: rgba(220, 220, 220, 0.4); }
+.monaco-editor .snippet-placeholder { background-color: rgba(10, 50, 100, 0.2); outline-color: transparent; }
+.monaco-editor .finish-snippet-placeholder { background-color: transparent; outline-color: rgba(10, 50, 100, 0.5); }
+.codicon.codicon-symbol-array { color: #616161; }
+.codicon.codicon-symbol-boolean { color: #616161; }
+.codicon.codicon-symbol-class { color: #d67e00; }
+.codicon.codicon-symbol-method { color: #652d90; }
+.codicon.codicon-symbol-color { color: #616161; }
+.codicon.codicon-symbol-constant { color: #616161; }
+.codicon.codicon-symbol-constructor { color: #652d90; }
+
+			.codicon.codicon-symbol-value,.codicon.codicon-symbol-enum { color: #d67e00; }
+.codicon.codicon-symbol-enum-member { color: #007acc; }
+.codicon.codicon-symbol-event { color: #d67e00; }
+.codicon.codicon-symbol-field { color: #007acc; }
+.codicon.codicon-symbol-file { color: #616161; }
+.codicon.codicon-symbol-folder { color: #616161; }
+.codicon.codicon-symbol-function { color: #652d90; }
+.codicon.codicon-symbol-interface { color: #007acc; }
+.codicon.codicon-symbol-key { color: #616161; }
+.codicon.codicon-symbol-keyword { color: #616161; }
+.codicon.codicon-symbol-module { color: #616161; }
+.codicon.codicon-symbol-namespace { color: #616161; }
+.codicon.codicon-symbol-null { color: #616161; }
+.codicon.codicon-symbol-number { color: #616161; }
+.codicon.codicon-symbol-object { color: #616161; }
+.codicon.codicon-symbol-operator { color: #616161; }
+.codicon.codicon-symbol-package { color: #616161; }
+.codicon.codicon-symbol-property { color: #616161; }
+.codicon.codicon-symbol-reference { color: #616161; }
+.codicon.codicon-symbol-snippet { color: #616161; }
+.codicon.codicon-symbol-string { color: #616161; }
+.codicon.codicon-symbol-struct { color: #616161; }
+.codicon.codicon-symbol-text { color: #616161; }
+.codicon.codicon-symbol-type-parameter { color: #616161; }
+.codicon.codicon-symbol-unit { color: #616161; }
+.codicon.codicon-symbol-variable { color: #007acc; }
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row .monaco-highlighted-label .highlight { color: #0066bf; }
+.monaco-editor .suggest-widget, .monaco-editor .suggest-details { color: #000000; }
+.monaco-editor .suggest-details a { color: #006ab1; }
+.monaco-editor .suggest-details code { background-color: rgba(220, 220, 220, 0.4); }
+.monaco-editor .accessibilityHelpWidget { background-color: #f3f3f3; }
+.monaco-editor .accessibilityHelpWidget { color: #616161; }
+.monaco-editor .accessibilityHelpWidget { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16); }
+.monaco-editor .focused .selectionHighlight { background-color: rgba(173, 214, 255, 0.3); }
+.monaco-editor .selectionHighlight { background-color: rgba(173, 214, 255, 0.15); }
+.monaco-editor .wordHighlight { background-color: rgba(87, 87, 87, 0.25); }
+.monaco-editor .wordHighlightStrong { background-color: rgba(14, 99, 156, 0.25); }
+
+.mtk1 { color: #000000; }
+.mtk2 { color: #fffffe; }
+.mtk3 { color: #808080; }
+.mtk4 { color: #ff0000; }
+.mtk5 { color: #0451a5; }
+.mtk6 { color: #0000ff; }
+.mtk7 { color: #098658; }
+.mtk8 { color: #008000; }
+.mtk9 { color: #dd0000; }
+.mtk10 { color: #383838; }
+.mtk11 { color: #cd3131; }
+.mtk12 { color: #863b00; }
+.mtk13 { color: #af00db; }
+.mtk14 { color: #800000; }
+.mtk15 { color: #e00000; }
+.mtk16 { color: #3030c0; }
+.mtk17 { color: #666666; }
+.mtk18 { color: #778899; }
+.mtk19 { color: #c700c7; }
+.mtk20 { color: #a31515; }
+.mtk21 { color: #4f76ac; }
+.mtk22 { color: #008080; }
+.mtk23 { color: #001188; }
+.mtk24 { color: #4864aa; }
+.mtki { font-style: italic; }
+.mtkb { font-weight: bold; }
+.mtku { text-decoration: underline; text-underline-position: under; }</style><style type="text/css" media="screen">
+		.monaco-editor .codelens-decoration._ee1f61 { line-height: 19px; font-size: 12px; padding-right: 6px; font-feature-settings: "liga" off, "calt" off }
+		.monaco-editor .codelens-decoration._ee1f61 span.codicon { line-height: 19px; font-size: 12px; }
+		</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="vs/basic-languages/python/python" src="./Coderbyte_CodeNameValid_files/python.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="monaco-vim" src="./Coderbyte_CodeNameValid_files/monaco-vim.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="monaco-emacs" src="./Coderbyte_CodeNameValid_files/monaco-emacs.js.download"></script></head>
+
+  <body>
+
+    <div id="container">
+
+      <div id="header">
+        <div id="header_left">
+          <a href="https://coderbyte.com/challenges" class="homebutton">Coderbyte</a>
+        </div>
+      </div>
+
+      <div id="fullscreenEditorArea" class="editorLightMode"><!----> <!----> <!----> <div id="splitPanes" class="splitter_panel" style="height: 682px;"><div id="chalDescription" class="alg-styles left_panel" style="left: 0px; width: 365.14px; height: 682px;"><!----> <div class="chalInstructions" style="height: auto;"><aside class="chalOptions"><p class="detailText"><span class="diffic easy">easy</span></p> <button class="neutralButton"><a href="https://coderbyte.com/question/search/Codeland%20Username%20Validation" target="_blank">
+                      Discussion <span class="newLinkPreview">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 14H13.25C13.664 14 14 13.664 14 13.25V8.75005H12.5V12.5H3.5V3.50005H7.25V2.00005H2.75C2.336 2.00005 2 2.33605 2 2.75005V13.25C2 13.664 2.336 14 2.75 14ZM9 2.00005H13C13.5523 2.00005 14 2.44776 14 3.00005V7.00005L12.0303 5.03037L9.53033 7.53037L8.46967 6.46971L10.9697 3.96971L9 2.00005Z" fill="#032538"></path>
+      </svg>
+    </span></a></button> <button class="neutralButton"><a href="https://coderbyte.com/solution/Codeland%20Username%20Validation#Python3" target="_blank">
+                      Solutions <span class="newLinkPreview">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 14H13.25C13.664 14 14 13.664 14 13.25V8.75005H12.5V12.5H3.5V3.50005H7.25V2.00005H2.75C2.336 2.00005 2 2.33605 2 2.75005V13.25C2 13.664 2.336 14 2.75 14ZM9 2.00005H13C13.5523 2.00005 14 2.44776 14 3.00005V7.00005L12.0303 5.03037L9.53033 7.53037L8.46967 6.46971L10.9697 3.96971L9 2.00005Z" fill="#032538"></path>
+      </svg>
+    </span></a></button> <!----> <!----></aside> <h3>Codeland Username Validation</h3> <!----> <!----> <!----> <!----> <div class="desc">Have the function <span style="font-family:&#39;Courier New&#39;;color:#a21818;"> CodelandUsernameValidation(<span style="font-family:&#39;Courier New&#39;;color:#1f5cc3;"><b>str</b></span>)</span> take the <span style="font-family:&#39;Courier New&#39;;color:#1f5cc3;"><b>str</b></span> 
+
+parameter being passed and determine if the string is a valid username according to the following rules: 
+<br><br>
+1. The username is between 4 and 25 characters.<br>
+2. It must start with a letter. <br>
+3. It can only contain letters, numbers, and the underscore character. <br>
+4. It cannot end with an underscore character.
+<br><br>
+
+If the username is valid then your program should return the string <strong>true</strong>, otherwise return the string <strong>false</strong>.
+</div> <!----> <!----> <!----> <h4>Examples</h4> <div class="samples"><section>
+                  Input: <span>"aa_"</span> <br>
+                  Output: <span>false</span> <!----></section> <section>
+                  Input: <span>"u__hello_world123"</span> <br>
+                  Output: <span>true</span> <!----></section></div> <h4>Tags</h4> <p class="detailText"><span class="tag">searching</span><span class="tag">string manipulation</span><span class="tag">searching</span><span class="tag">regular expression</span><span class="tag">Codeland</span><span class="tag">free</span></p> <!----> <div id="searchOnlineArea" class="searchOnlineArea"><!----></div></div></div><div class="vsplitter" style="left: 365px;"></div> <div id="codingArea" class="right_panel splitter_panel" style="width: 1164px; left: 372px; height: 682px;"><div class="codingAreaEditor left_panel" style="left: 0px; width: 718.18px;"><aside class="languageOptions"><button class="neutralButton dark resetButton f_right"><span>
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"></path></g><g><g><path d="M6,13c0-1.65,0.67-3.15,1.76-4.24L6.34,7.34C4.9,8.79,4,10.79,4,13c0,4.08,3.05,7.44,7,7.93v-2.02 C8.17,18.43,6,15.97,6,13z M20,13c0-4.42-3.58-8-8-8c-0.06,0-0.12,0.01-0.18,0.01l1.09-1.09L11.5,2.5L8,6l3.5,3.5l1.41-1.41 l-1.08-1.08C11.89,7.01,11.95,7,12,7c3.31,0,6,2.69,6,6c0,2.97-2.17,5.43-5,5.91v2.02C16.95,20.44,20,17.08,20,13z"></path></g></g></svg>
+    </span> Reset
+                </button> <button class="neutralButton dark resetButton f_right"><span>
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><rect fill="none" height="24" width="24"></rect><path d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg>
+    </span> Dark
+                </button> <button class="neutralButton editorModeButton dark resetButton f_right">Emacs</button> <button class="neutralButton editorModeButton dark resetButton f_right">Vim</button> <div id="vimStatusNode" style="display: none;"></div> <button class="neutralButton dark selectedLanguage">
+                  Python3
+                  <span>▼</span></button> <div class="showAllLanguagesDropdown screeningEditor" style="display: none;"><ul><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_c.png"> <span>C</span></li><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_cpp.png"> <span>C++</span></li><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_csharp.png"> <span>C#</span></li><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_clojure.png"> <span>Clojure</span></li><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_dart.png"> <span>Dart</span></li><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_elixir.png"> <span>Elixir</span></li><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_go.png"> <span>Go</span></li><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_java_notext.png"> <span>Java</span></li><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_js.jpg"> <span>JavaScript</span></li></ul> <ul><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_kotlin.png"> <span>Kotlin</span></li><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_php.png"> <span>PHP</span></li><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_python.png"> <span>Python3</span></li><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_r.png"> <span>R</span></li><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_ruby.png"> <span>Ruby</span></li><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_scala.png"> <span>Scala</span></li><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_swift.png"> <span>Swift</span></li><li><img src="./Coderbyte_CodeNameValid_files/skill_logo_typescript.jpg"> <span>TypeScript</span></li></ul></div></aside> <img src="./Coderbyte_CodeNameValid_files/ajax-loader-2.gif" class="codeEditorSpinner" style="display: none;"> <div id="code" class="notranslate alg-styles " data-keybinding-context="1" data-mode-id="python"><div class="monaco-editor no-user-select  showUnused showDeprecated vs" role="code" data-uri="inmemory://model/1" style="width: 718px; height: 641px;"><div data-mprt="3" class="overflow-guard" style="width: 718px; height: 641px;"><div class="margin" role="presentation" aria-hidden="true" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; height: 641px; width: 64px;"><div class="glyph-margin" style="left: 0px; width: 0px; height: 641px;"></div><div class="margin-view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="margin-view-overlays" role="presentation" aria-hidden="true" style="position: absolute; width: 64px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 19px; letter-spacing: 0px; height: 641px;"><div style="position:absolute;top:0px;width:100%;height:19px;"><div class="cldr codicon codicon-folding-expanded" style="left:38px;width:26px;"></div><div class="line-numbers" style="left:0px;width:38px;">1</div></div><div style="position:absolute;top:19px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">2</div></div><div style="position:absolute;top:38px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">3</div></div><div style="position:absolute;top:57px;width:100%;height:19px;"><div class="current-line current-line-margin-both" style="width:64px; height:19px;"></div><div class="cldr codicon codicon-folding-expanded" style="left:38px;width:26px;"></div><div class="active-line-number line-numbers" style="left:0px;width:38px;">4</div></div><div style="position:absolute;top:152px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">9</div></div><div style="position:absolute;top:171px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">10</div></div><div style="position:absolute;top:190px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">11</div></div><div style="position:absolute;top:76px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">5</div></div><div style="position:absolute;top:133px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">8</div></div><div style="position:absolute;top:95px;width:100%;height:19px;"><div class="cldr codicon codicon-folding-expanded" style="left:38px;width:26px;"></div><div class="line-numbers" style="left:0px;width:38px;">6</div></div><div style="position:absolute;top:114px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">7</div></div><div style="position:absolute;top:209px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:38px;">12</div></div></div></div><div class="monaco-scrollable-element editor-scrollable vs" role="presentation" data-mprt="5" style="position: absolute; overflow: hidden; left: 64px; width: 654px; height: 641px;"><div class="lines-content monaco-editor-background" style="position: absolute; overflow: hidden; width: 1e+06px; height: 1e+06px; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; left: 0px;"><div class="view-overlays" role="presentation" aria-hidden="true" style="position: absolute; height: 0px; width: 1462px;"><div style="position:absolute;top:0px;width:100%;height:19px;"></div><div style="position:absolute;top:19px;width:100%;height:19px;"><div class="cigr" style="left:0px;height:19px;width:15.3984375px"></div></div><div style="position:absolute;top:38px;width:100%;height:19px;"><div class="cigr" style="left:0px;height:19px;width:15.3984375px"></div></div><div style="position:absolute;top:57px;width:100%;height:19px;"><div class="current-line" style="width:1462px; height:19px;"></div><div class="cigr" style="left:0px;height:19px;width:15.3984375px"></div><div class="cdr bracket-match" style="left:439px;width:8px;height:19px;"></div><div class="cdr bracket-match" style="left:755px;width:7px;height:19px;"></div></div><div style="position:absolute;top:152px;width:100%;height:19px;"><div class="cigr" style="left:0px;height:19px;width:15.3984375px"></div></div><div style="position: absolute; top: 171px; width: 100%; height: 19px;"></div><div style="position:absolute;top:190px;width:100%;height:19px;"></div><div style="position:absolute;top:76px;width:100%;height:19px;"><div class="cigr" style="left:0px;height:19px;width:15.3984375px"></div><div class="cigra" style="left:15.3984375px;height:19px;width:15.3984375px"></div></div><div style="position:absolute;top:133px;width:100%;height:19px;"><div class="cigr" style="left:0px;height:19px;width:15.3984375px"></div></div><div style="position:absolute;top:95px;width:100%;height:19px;"><div class="cigr" style="left:0px;height:19px;width:15.3984375px"></div></div><div style="position:absolute;top:114px;width:100%;height:19px;"><div class="cigr" style="left:0px;height:19px;width:15.3984375px"></div><div class="cigr" style="left:15.3984375px;height:19px;width:15.3984375px"></div></div><div style="position:absolute;top:209px;width:100%;height:19px;"></div></div><div role="presentation" aria-hidden="true" class="view-rulers"></div><div class="view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="7" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 19px; letter-spacing: 0px; width: 1462px; height: 641px;"><div style="top:0px;height:19px;" class="view-line"><span><span class="mtk6">def</span><span class="mtk1">&nbsp;CodelandUsernameValidation(strParam):</span></span></div><div style="top:19px;height:19px;" class="view-line"><span><span></span></span></div><div style="top:38px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;</span><span class="mtk8">#&nbsp;code&nbsp;goes&nbsp;here</span></span></div><div style="top:57px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;</span><span class="mtk6">if</span><span class="mtk1">&nbsp;((strParam[</span><span class="mtk7">0</span><span class="mtk1">].isalpha()&nbsp;</span><span class="mtk6">or</span><span class="mtk1">&nbsp;strParam[</span><span class="mtk7">0</span><span class="mtk1">].isnum())&nbsp;</span><span class="mtk6">and</span><span class="mtk1">&nbsp;(</span><span class="mtk6">len</span><span class="mtk1">(strParam)&nbsp;&gt;&nbsp;</span><span class="mtk7">4</span><span class="mtk1">&nbsp;</span><span class="mtk6">and</span><span class="mtk1">&nbsp;</span><span class="mtk6">len</span><span class="mtk1">(strParam)&nbsp;&lt;&nbsp;</span><span class="mtk7">25</span><span class="mtk1">)&nbsp;</span><span class="mtk6">and</span><span class="mtk1">&nbsp;(strParam[</span><span class="mtk7">0</span><span class="mtk1">]&nbsp;!=&nbsp;</span><span class="mtk20">"_"</span><span class="mtk1">&nbsp;</span><span class="mtk6">and</span><span class="mtk1">&nbsp;strParam[</span><span class="mtk7">-1</span><span class="mtk1">]&nbsp;!=&nbsp;</span><span class="mtk20">"_"</span><span class="mtk1">)):</span></span></div><div style="top:152px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;</span><span class="mtk8">#return&nbsp;strParam</span></span></div><div style="top: 171px; height: 19px;" class="view-line"><span><span></span></span></div><div style="top:190px;height:19px;" class="view-line"><span><span class="mtk8">#&nbsp;keep&nbsp;this&nbsp;function&nbsp;call&nbsp;here&nbsp;</span></span></div><div style="top:76px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk6">return</span><span class="mtk1">&nbsp;</span><span class="mtk6">True</span></span></div><div style="top: 133px; height: 19px;" class="view-line"><span><span></span></span></div><div style="top:95px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;</span><span class="mtk6">else</span><span class="mtk1">:</span></span></div><div style="top:114px;height:19px;" class="view-line"><span><span class="mtk1">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="mtk6">return</span><span class="mtk1">&nbsp;</span><span class="mtk6">False</span></span></div><div style="top:209px;height:19px;" class="view-line"><span><span class="mtk6">print</span><span class="mtk1">(CodelandUsernameValidation(</span><span class="mtk6">input</span><span class="mtk1">()))</span></span></div></div><div data-mprt="1" class="contentWidgets" style="position: absolute; top: 0px;"></div><div role="presentation" aria-hidden="true" class="cursors-layer cursor-line-style cursor-solid"><div class="cursor monaco-mouse-cursor-text " style="height: 19px; top: 57px; left: 731px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; width: 1.6px;"></div></div></div><div role="presentation" aria-hidden="true" class="visible scrollbar horizontal" style="position: absolute; width: 640px; height: 12px; left: 0px; bottom: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 286px;"></div></div><canvas class="decorationsOverviewRuler" aria-hidden="true" width="17" height="801" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 641px;"></canvas><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute; width: 14px; height: 641px; right: 0px; top: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 641px;"></div></div></div><div role="presentation" aria-hidden="true" style="width: 718px;"></div><textarea data-mprt="6" class="inputarea monaco-mouse-cursor-text" wrap="off" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" aria-label="Editor content;Press Alt+F1 for Accessibility Options." tabindex="0" role="textbox" aria-roledescription="editor" aria-multiline="true" aria-haspopup="false" aria-autocomplete="both" style="font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 19px; letter-spacing: 0px; top: 0px; left: 0px; width: 1px; height: 1px;"></textarea><div style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px;" class="monaco-editor-background textAreaCover line-numbers"></div><div data-mprt="4" class="overlayWidgets" style="width: 718px;"><div widgetid="editor.contrib.quickInputWidget" style="position: absolute; top: 0px; right: 50%;"></div><div class="accessibilityHelpWidget" role="dialog" aria-hidden="true" widgetid="editor.contrib.accessibilityHelpWidget" style="display: none; position: absolute;"><div role="document"></div></div></div><div data-mprt="8" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 0px; width: 0px; height: 641px;"><div class="minimap-shadow-hidden" style="height: 641px;"></div><canvas width="0" height="801" style="position: absolute; left: 0px; width: 0px; height: 641px;"></canvas><canvas class="minimap-decorations-layer" width="0" height="801" style="position: absolute; left: 0px; width: 0px; height: 641px;"></canvas><div class="minimap-slider" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; width: 0px;"><div class="minimap-slider-horizontal" style="position: absolute; width: 0px; height: 0px;"></div></div></div></div><div data-mprt="2" class="overflowingContentWidgets"><div class="monaco-editor rename-box" widgetid="__renameInputWidget" style="background-color: rgb(243, 243, 243); box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 8px 2px; color: rgb(97, 97, 97); position: absolute; visibility: hidden; max-width: 1536px;"><input class="rename-input" type="text" aria-label="Rename input. Type new name and press Enter to commit." style="font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; background-color: rgb(255, 255, 255); border-width: 0px; border-style: none;"><div class="rename-label" style="font-size: 11.2px;">Enter to Rename, Shift+Enter to Preview</div></div><div class="monaco-hover hidden" tabindex="0" role="tooltip" widgetid="editor.contrib.modesContentHoverWidget" style="position: absolute; visibility: hidden; max-width: 1536px; top: 68px; left: 318px;"><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="monaco-hover-content" style="overflow: hidden; font-size: 14px; line-height: 19px; max-height: 250px; max-width: 500px;"><div class="hover-row markdown-hover"><div class="hover-contents"><div><p>input(prompt)</p><p>Read a string from standard input.  The trailing newline is stripped.</p><p>The prompt string, if given, is printed to standard output without a
+trailing newline before reading input.</p><p>If the user hits EOF (*nix: Ctrl-D, Windows: Ctrl-Z+Return), raise EOFError.
+On *nix systems, readline is used if available.</p></div></div></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 388px; height: 10px; left: 0px; bottom: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 388px;"></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute; width: 10px; height: 141px; right: 0px; top: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 141px;"></div></div><div class="shadow"></div><div class="shadow"></div><div class="shadow top-left-corner"></div></div></div><div class="editor-widget suggest-widget" widgetid="editor.widget.suggestWidget" style="background-color: rgb(243, 243, 243); border-color: rgb(200, 200, 200); position: absolute; visibility: hidden; max-width: 1536px; height: 21px; width: 430px; top: 38px; left: 187px;"><div class="monaco-sash vertical" style="left: 428px;"></div><div class="monaco-sash vertical disabled" style="left: -2px;"></div><div class="monaco-sash orthogonal-edge-north horizontal disabled" style="top: -2px;"><div class="orthogonal-drag-handle end"></div></div><div class="monaco-sash orthogonal-edge-south horizontal" style="top: 19px;"><div class="orthogonal-drag-handle end"></div></div><div class="message" aria-hidden="true" style="background-color: rgb(243, 243, 243); border-color: rgb(200, 200, 200); display: none;"></div><div class="tree" style="height: 21px; display: none;" aria-hidden="true"><div class="monaco-list list_id_1 selection-none" tabindex="0" role="listbox" aria-label="Suggest"><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="monaco-list-rows" style="transform: translate3d(0px, 0px, 0px); overflow: hidden; height: 0px; left: 0px; top: 0px;"></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 0px; height: 10px; left: 0px; bottom: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 0px;"></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute; width: 10px; height: 21px; right: 0px; top: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 21px;"></div></div></div><style type="text/css" media="screen">.monaco-list.list_id_1:focus .monaco-list-row.selected { background-color: #0060c0; }
+.monaco-list.list_id_1:focus .monaco-list-row.selected:hover { background-color: #0060c0; }
+.monaco-list.list_id_1:focus .monaco-list-row.selected { color: #ffffff; }
+
+				.monaco-drag-image,
+				.monaco-list.list_id_1:focus .monaco-list-row.selected.focused { background-color: #0060c0; }
+			
+
+				.monaco-drag-image,
+				.monaco-list.list_id_1:focus .monaco-list-row.selected.focused { color: #ffffff; }
+			
+.monaco-list.list_id_1 .monaco-list-row.focused { background-color:  #d6ebff; }
+.monaco-list.list_id_1 .monaco-list-row.focused:hover { background-color:  #d6ebff; }
+.monaco-list.list_id_1 .monaco-list-row.selected { background-color:  #e4e6f1; }
+.monaco-list.list_id_1 .monaco-list-row.selected:hover { background-color:  #e4e6f1; }
+.monaco-list.list_id_1:not(.drop-target) .monaco-list-row:hover:not(.selected):not(.focused) { background-color: #f0f0f0; }
+
+				.monaco-drag-image,
+				.monaco-list.list_id_1:focus .monaco-list-row.focused { outline: 1px solid #0090f1; outline-offset: -1px; }
+			
+.monaco-list-type-filter { background-color: #efc1ad }
+.monaco-list-type-filter { border: 1px solid rgba(0, 0, 0, 0); }
+.monaco-list-type-filter.no-matches { border: 1px solid #be1100; }
+.monaco-list-type-filter { box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16); }
+
+				.monaco-table:hover > .monaco-split-view2,
+				.monaco-table:hover > .monaco-split-view2 .monaco-sash.vertical::before {
+					border-color: rgba(97, 97, 97, 0.13);
+			}</style></div></div><div class="suggest-status-bar" style="border-top-color: rgb(200, 200, 200); line-height: 19px; display: none;" aria-hidden="true"><div class="monaco-action-bar animated left"><ul class="actions-container" role="toolbar"><li class="action-item menu-entry" role="presentation"><a class="action-label" role="button" title="Insert (Enter)" tabindex="0">Insert (⏎)</a></li></ul></div><div class="monaco-action-bar animated right"><ul class="actions-container" role="toolbar"><li class="action-item menu-entry" role="presentation"><a class="action-label" role="button" title="show more (Ctrl+Space)" tabindex="0">show more (Ctrl+Space)</a></li></ul></div></div></div><div class="editor-widget parameter-hints-widget" widgetid="editor.widget.parameterHintsWidget" style="user-select: text; position: absolute; visibility: hidden; max-width: 1536px; font-size: 14px; max-height: 250px; top: 76px; left: 718px;"><div class="phwrapper" tabindex="-1" style="max-height: 250px;"><div class="controls"><div class="button codicon codicon-parameter-hints-previous"></div><div class="overloads">1/1</div><div class="button codicon codicon-parameter-hints-next"></div></div><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="body" style="overflow: hidden;"><div class="signature has-docs"><div class="code" style="font-size: 14px; font-family: Consolas, &quot;Courier New&quot;, monospace;"><span>len(</span><span class="parameter active">obj</span><span>) -&gt; int</span></div></div><div class="docs"><p><span class="documentation"><div class="markdown-docs"><p>obj</p></div></span></p><div class="markdown-docs"><p>Return the number of items in a container.</p></div></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute; width: 66px; height: 10px; left: 0px; bottom: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 66px;"></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute; width: 10px; height: 222px; right: 0px; top: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 222px;"></div></div><div class="shadow"></div><div class="shadow"></div><div class="shadow top-left-corner"></div></div></div></div></div><div class="context-view" aria-hidden="true" style="display: none;"></div></div></div></div><div class="vsplitter" style="left: 718px;"></div> <div id="console" class="alg-styles  right_panel" style="width: 439px; left: 725px;"><aside translate="translate" class="buttonActions notranslate extraPadding"><button class="neutralButton runCode">▶ Run Code</button> <button class="neutralButton dark runTests"><span>
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><rect fill="none" height="24" width="24"></rect><path d="M13,11H4c-1.1,0-2-0.9-2-2V6c0-1.1,0.9-2,2-2h9V11z M4,9h7V6H4V9z M15,20H4c-1.1,0-2-0.9-2-2v-3c0-1.1,0.9-2,2-2h11V20z M4,18h9v-3H4V18z M22,9h-2l2-5h-7v7h2v9L22,9z M4.75,17.25h1.5v-1.5h-1.5V17.25z M4.75,8.25h1.5v-1.5h-1.5V8.25z"></path></g></svg>
+    </span> Run Test Cases
+                  </button> <!----> <!----> <!----> <button class="neutralButton dark submitButton">Submit</button> <!----> <!----> <input type="text" placeholder="input paramter goes here" class="input_for_code"> <!----></aside> <span translate="translate" class="clearLogText notranslate">Clear Log</span> <span translate="translate" class="clearLogText autoClearLogText notranslate">Auto-clear</span> <!----> <textarea id="consoleOutputMain" readonly="readonly" class="consoleOutput">output logs will appear here
+
+Traceback (most recent call last):
+  File "/home/glot/main.py", line 12, in &lt;module&gt;
+    print(CodelandUsernameValidation("_aa"))
+  File "/home/glot/main.py", line 4, in CodelandUsernameValidation
+    if (strParam[0].isalpha() or strparam[0].isnum()) and (len(strparam) &gt; 4 and len(strparam) &lt; 25) and (strparam[0] != "_" and strparam[-1] != "_"):
+NameError: name 'strparam' is not defined
+
+Exit code: 1
+  File "/home/glot/main.py", line 2
+    strParam False
+             ^
+SyntaxError: invalid syntax
+
+Exit code: 1
+Traceback (most recent call last):
+  File "/home/glot/main.py", line 12, in &lt;module&gt;
+    print(CodelandUsernameValidation("a_a"))
+  File "/home/glot/main.py", line 4, in CodelandUsernameValidation
+    if (strParam[0].isalpha() or strparam[0].isnum()) and (len(strparam) &gt; 4 and len(strparam) &lt; 25) and (strparam[0] != "_" and strparam[-1] != "_"):
+NameError: name 'strparam' is not defined
+
+Exit code: 1
+Traceback (most recent call last):
+  File "/home/glot/main.py", line 12, in &lt;module&gt;
+    print(CodelandUsernameValidation(input(strparam)))
+NameError: name 'strparam' is not defined
+
+Exit code: 1
+Traceback (most recent call last):
+  File "/home/glot/main.py", line 12, in &lt;module&gt;
+    print(CodelandUsernameValidation("a_a"))
+  File "/home/glot/main.py", line 4, in CodelandUsernameValidation
+    if (strParam[0].isalpha() or strparam[0].isnum()) and (len(strparam) &gt; 4 and len(strparam) &lt; 25) and (strparam[0] != "_" and strparam[-1] != "_"):
+NameError: name 'strparam' is not defined
+
+Exit code: 1
+Traceback (most recent call last):
+  File "/home/glot/main.py", line 12, in &lt;module&gt;
+    print(CodelandUsernameValidation("a_a"))
+  File "/home/glot/main.py", line 4, in CodelandUsernameValidation
+    if ((strParam[0].isalpha() or strparam[0].isnum()) and (len(strparam) &gt; 4 and len(strparam) &lt; 25) and (strparam[0] != "_" and strparam[-1] != "_")):
+NameError: name 'strparam' is not defined
+
+Exit code: 1
+False
+
+False
+
+False
+
+False
+
+True
+
+False
+
+True
+</textarea></div></div></div> <div class="mainModal" style="display: none;"><div class="__modal __modal__create-assessment"><aside class="mainInnerModal"><div class="modalHeader"><h4>Copy &amp; pasting detected</h4> <span class="closeModal gray">×</span></div> <div class="modalBody"><p class="showCopyText">This page monitors when you copy code in order to prevent cheating..</p> <img src="./Coderbyte_CodeNameValid_files/copying_code.png" class="realtimeDemo"></div></aside></div></div> <div class="mainModal" style="display: none;"><div class="__modal __modal__create-assessment"><aside class="mainInnerModal"><div class="modalHeader"><h4>Output modification is enabled</h4> <span class="closeModal gray">×</span></div> <div class="modalBody"><p class="showCopyText">Your organization enabled this feature to ensure that every challenge is 100% unique and that users cannot easily copy/paste a solution found online.</p> <img src="./Coderbyte_CodeNameValid_files/copying_code.png" class="realtimeDemo" style="width: 50%;"></div></aside></div></div> <div class="mainModal" style="display: none;"><div class="__modal __modal__create-assessment"><aside class="mainInnerModal"><div class="modalHeader"><h4>Please disable your Ad blocker</h4> <p class="showCopyText">For this editor to work properly you will need to disable your ad blocker and make sure cookies are enabled. Please reload this page after those changes. Contact support@coderbyte.com with any questions.</p></div> <div class="modalBody"><img src="./Coderbyte_CodeNameValid_files/done-1.png" class="realtimeDemo"></div></aside></div></div> <div class="mainModal" style="display: none;"><div class="__modal __modal__create-assessment"><aside class="mainInnerModal"><div class="modalHeader"><h4>Important message</h4> <span class="closeModal gray">×</span></div> <div class="modalBody"><p class="showCopyText">Your organization has disabled candidates from redoing challenges so make sure you are satisfied with your solution.</p> <img src="./Coderbyte_CodeNameValid_files/done-1.png" class="realtimeDemo"></div></aside></div></div> <div class="mainModal" style="display: none;"><div class="__modal __modal__create-assessment"><aside class="mainInnerModal"><div class="modalHeader"><h4>Editor instructions</h4> <span class="closeModal gray">×</span></div> <div class="modalBody"><ul class="editorInstructions"><li>Please write your code in this editor.</li> <li>Click <strong>Submit</strong> when you are done with this challenge.</li> <li>You can select your language in the dropdown above the editor and you can change the <strong>return type</strong> in the main function.</li> <li>Do not copy/paste blocks of code directly into this editor.</li> <li>Make sure to remove the <strong>console.log</strong> and <strong>print</strong> statements that were used for debugging before submitting.</li> <!----></ul> <img src="./Coderbyte_CodeNameValid_files/done-1.png" class="realtimeDemo"></div></aside></div></div> <div class="mainModal" style="display: none;"><div class="__modal __modal__create-assessment"><aside class="mainInnerModal"><div class="modalHeader"><h4>Ready to submit?</h4> <span class="closeModal gray">×</span></div> <div class="modalBody"><p class="showCopyText">
+                  To submit your code, please 
+                  <a href="https://coderbyte.com/sl?redirect=/information/Codeland%20Username%20Validation">create an account on Coderbyte.</a></p> <img src="./Coderbyte_CodeNameValid_files/done-1.png" class="realtimeDemo"></div></aside></div></div></div>
+
+    </div>
+
+  
+
+<div id="cursorMessageDiv" style="display: none;">&nbsp;</div><div class="monaco-aria-container"><div class="monaco-alert" role="alert" aria-atomic="true" style="visibility: visible;">obj, hint</div><div class="monaco-alert" role="alert" aria-atomic="true"></div><div class="monaco-status" role="complementary" aria-live="polite" aria-atomic="true"></div><div class="monaco-status" role="complementary" aria-live="polite" aria-atomic="true"></div></div></body></html>
