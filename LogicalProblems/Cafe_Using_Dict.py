@@ -12,13 +12,31 @@ what information do you want?
 how much quantities sold for a specific dish or remaining quantity of the dish?
 
 """
-#initializing a variable and store all the details of the cafe in a dictionary
-Cafe_dishes_and_quantities = { 'vadai':{'quantity' : 50 , 'total sales ': 250 , 'remaining quantity' : 5},
-                            'tea':{'quantity' : 50, 'total sales ': 250 , 'remaining quantity' : '2 litres'},
-                            'idly':{'quantity' : 50, 'total sales ': 500 , 'remaining quantity' : 0},
-                            'dosai':{'quantity' : 50, 'total sales ': 1200 , 'remaining quantity' : 9},
-                            'poori':{'quantity' : 50, 'total sales ': 1250 , 'remaining quantity' : 14},
-                            'pongal':{'quantity' : 50, 'total sales ': 1250 , 'remaining quantity' : 14}}
+# #initializing a variable and store all the details of the cafe in a dictionary
+# Cafe_dishes_and_quantities = { 'vadai':{'quantity' : 50 , 'total sales ': 250 , 'remaining quantity' : 5},
+#                             'tea':{'quantity' : 50, 'total sales ': 250 , 'remaining quantity' : '2 litres'},
+#                             'idly':{'quantity' : 50, 'total sales ': 500 , 'remaining quantity' : 0},
+#                             'dosai':{'quantity' : 50, 'total sales ': 1200 , 'remaining quantity' : 9},
+#                             'poori':{'quantity' : 50, 'total sales ': 1250 , 'remaining quantity' : 14},
+#                             'pongal':{'quantity' : 50, 'total sales ': 1250 , 'remaining quantity' : 14}}
+
+#creating a empty dictionary
+Cafe_dishes_and_quantities = {}
+#input of total number of dishes available
+Total_cafe_items = int(input('enter the total dishes in the cafe : '))
+
+#using for loop to create a dynamic dictionary
+for key in range(Total_cafe_items):
+    #all inputs for the dictionary
+    Dish = input('enter the dish : ')
+    Total_quantity = int(input('enter the total quantity : '))
+    Total_sales = int(input('enter the total sales of the dish : '))
+    Remaining_quantity = int(input('enter the remaining quantity of the dish : '))
+    #updating the dictionary
+    Cafe_dishes_and_quantities.update({Dish : {'Total_quantity' : Total_quantity,'Total_sales':Total_sales,'Remaining_quantity':Remaining_quantity}})
+    
+#printing the dictionary
+print(Cafe_dishes_and_quantities)
 
 #initiailizing a variable for the owner and giving a boolean value
 owner = True
@@ -44,7 +62,7 @@ while owner == True:
         for item in dishes:
             #if the dish is in the cafe it will execute
             if  item in Cafe_dishes_and_quantities:
-                print('Total quantity of the',item,': ',Cafe_dishes_and_quantities[item]['quantity'])
+                print('Total quantity of the',item,': ',Cafe_dishes_and_quantities[item]['Total_quantity'])
             #else this will execute
             else:
                 print('entered dish is not sell today')
@@ -57,7 +75,7 @@ while owner == True:
         dishes = dish.split(',')
         for item in dishes:
             if  item in Cafe_dishes_and_quantities:
-                print('total sales of the', item ,':',Cafe_dishes_and_quantities[item]['total sales '])
+                print('total sales of the', item ,':',Cafe_dishes_and_quantities[item]['Total_sales'])
             else:
                 print('entered dish is not sell today')
                 continue
@@ -69,7 +87,7 @@ while owner == True:
         dishes = dish.split(',')
         for item in dishes:
             if  item in Cafe_dishes_and_quantities:
-                print('remaining quantity of the', item ,': ',Cafe_dishes_and_quantities[item]['remaining quantity'])
+                print('remaining quantity of the', item ,': ',Cafe_dishes_and_quantities[item]['Remaining_quantity'])
             else:
                 print('entered dish is not sell today')
                 continue
