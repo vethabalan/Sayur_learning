@@ -12,13 +12,13 @@ what information do you want?
 how much quantities sold for a specific dish or remaining quantity of the dish?
 
 """
-#initializing a variable and store all the details of the cafe in a dictionary
-Cafe_dishes_and_quantities = { 'vadai':{'quantity' : 50 , 'total sales ': 250 , 'remaining quantity' : 5},
-                            'tea':{'quantity' : 50, 'total sales ': 250 , 'remaining quantity' : '2 litres'},
-                            'idly':{'quantity' : 50, 'total sales ': 500 , 'remaining quantity' : 0},
-                            'dosai':{'quantity' : 50, 'total sales ': 1200 , 'remaining quantity' : 9},
-                            'poori':{'quantity' : 50, 'total sales ': 1250 , 'remaining quantity' : 14},
-                            'pongal':{'quantity' : 50, 'total sales ': 1250 , 'remaining quantity' : 14}}
+# #initializing a variable and store all the details of the cafe in a dictionary
+# Cafe_dishes_and_quantities = { 'vadai':{'quantity' : 50 , 'total sales ': 250 , 'remaining quantity' : 5},
+#                             'tea':{'quantity' : 50, 'total sales ': 250 , 'remaining quantity' : '2 litres'},
+#                             'idly':{'quantity' : 50, 'total sales ': 500 , 'remaining quantity' : 0},
+#                             'dosai':{'quantity' : 50, 'total sales ': 1200 , 'remaining quantity' : 9},
+#                             'poori':{'quantity' : 50, 'total sales ': 1250 , 'remaining quantity' : 14},
+#                             'pongal':{'quantity' : 50, 'total sales ': 1250 , 'remaining quantity' : 14}}
 #creating a empty dictionary
 Cafe_dishes_and_quantities = {}
 #input of total number of dishes available
