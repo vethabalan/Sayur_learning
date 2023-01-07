@@ -123,5 +123,41 @@ Total quantity of the idly :  50
 Total quantity of the pongal :  50
 Which information do you Want : none
 
+DYNAMIC DICTIONARY : 
+
+TEST CASE-1:
+enter the total dishes in the cafe : 2
+enter the dish : tea
+enter the total quantity : 20
+enter the total sales of the dish : 200
+enter the remaining quantity of the dish : 2
+
+enter the dish : dosai  
+enter the total quantity : 50
+enter the total sales of the dish : 1250
+enter the remaining quantity of the dish : 4
+
+{'tea': {'Total_quantity': 20, 'Total_sales': 200, 'Remaining_quantity': 2}, 'dosai': {'Total_quantity': 50, 'Total_sales': 1250, 'Remaining_quantity': 4}}
+
+Which information do you Want : i want the total sales
+which dish sales do you want? : dosai,tea
+total sales of the dosai : 1250
+total sales of the tea : 200
+
+Which information do you Want : i want the details of remaining quantity
+which dish remaining quantity do you want? : tea,dosai
+remaining quantity of the tea :  2
+remaining quantity of the dosai :  4
+
+Which information do you Want : i want the details of today dishes
+dict_keys(['tea', 'dosai'])
+
+Which information do you Want : i want the dish quantity
+which dish quantity do you want? : tea,dosai
+Total quantity of the tea :  20
+Total quantity of the dosai :  50
+
+Which information do you Want : none
+
 
 """
