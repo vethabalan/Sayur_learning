@@ -19,6 +19,22 @@ Cafe_dishes_and_quantities = { 'vadai':{'quantity' : 50 , 'total sales ': 250 , 
                             'dosai':{'quantity' : 50, 'total sales ': 1200 , 'remaining quantity' : 9},
                             'poori':{'quantity' : 50, 'total sales ': 1250 , 'remaining quantity' : 14},
                             'pongal':{'quantity' : 50, 'total sales ': 1250 , 'remaining quantity' : 14}}
+#creating a empty dictionary
+Cafe_dishes_and_quantities = {}
+#input of total number of dishes available
+Total_cafe_items = int(input('enter the total dishes in the cafe : '))
+
+#using for loop to create a dynamic dictionary
+for key in range(Total_cafe_items):
+    #all inputs for the dictionary
+    Dish = input('enter the dish : ')
+    Total_quantity = int(input('enter the total quantity : '))
+    Total_sales = int(input('enter the total sales of the dish : '))
+    Remaining_quantity = int(input('enter the remaining quantity of the dish : '))
+    #updating the dictionary
+    Cafe_dishes_and_quantities.update({Dish : {'Total_quantity' : Total_quantity,'Total_sales':Total_sales,'Remaining_quantity':Remaining_quantity}})
+#printing the dictionary
+print(Cafe_dishes_and_quantities)
 
 #initiailizing a variable for the owner and giving a boolean value
 owner = True
@@ -44,7 +60,7 @@ while owner == True:
         for item in dishes:
             #if the dish is in the cafe it will execute
             if  item in Cafe_dishes_and_quantities:
-                print('Total quantity of the',item,': ',Cafe_dishes_and_quantities[item]['quantity'])
+                print('Total quantity of the',item,': ',Cafe_dishes_and_quantities[item]['Total_quantity'])
             #else this will execute
             else:
                 print('entered dish is not sell today')
@@ -57,7 +73,7 @@ while owner == True:
         dishes = dish.split(',')
         for item in dishes:
             if  item in Cafe_dishes_and_quantities:
-                print('total sales of the', item ,':',Cafe_dishes_and_quantities[item]['total sales '])
+                print('total sales of the', item ,':',Cafe_dishes_and_quantities[item]['Total_sales'])
             else:
                 print('entered dish is not sell today')
                 continue
@@ -69,7 +85,7 @@ while owner == True:
         dishes = dish.split(',')
         for item in dishes:
             if  item in Cafe_dishes_and_quantities:
-                print('remaining quantity of the', item ,': ',Cafe_dishes_and_quantities[item]['remaining quantity'])
+                print('remaining quantity of the', item ,': ',Cafe_dishes_and_quantities[item]['Remaining_quantity'])
             else:
                 print('entered dish is not sell today')
                 continue
@@ -102,6 +118,44 @@ which dish quantity do you want? : dosai,idly,pongal
 Total quantity of the dosai :  50
 Total quantity of the idly :  50
 Total quantity of the pongal :  50
+Which information do you Want : none
+
+
+
+DYNAMIC DICTIONARY : 
+
+TEST CASE-1:
+enter the total dishes in the cafe : 2
+enter the dish : tea
+enter the total quantity : 20
+enter the total sales of the dish : 200
+enter the remaining quantity of the dish : 2
+
+enter the dish : dosai  
+enter the total quantity : 50
+enter the total sales of the dish : 1250
+enter the remaining quantity of the dish : 4
+
+{'tea': {'Total_quantity': 20, 'Total_sales': 200, 'Remaining_quantity': 2}, 'dosai': {'Total_quantity': 50, 'Total_sales': 1250, 'Remaining_quantity': 4}}
+
+Which information do you Want : i want the total sales
+which dish sales do you want? : dosai,tea
+total sales of the dosai : 1250
+total sales of the tea : 200
+
+Which information do you Want : i want the details of remaining quantity
+which dish remaining quantity do you want? : tea,dosai
+remaining quantity of the tea :  2
+remaining quantity of the dosai :  4
+
+Which information do you Want : i want the details of today dishes
+dict_keys(['tea', 'dosai'])
+
+Which information do you Want : i want the dish quantity
+which dish quantity do you want? : tea,dosai
+Total quantity of the tea :  20
+Total quantity of the dosai :  50
+
 Which information do you Want : none
 
 
