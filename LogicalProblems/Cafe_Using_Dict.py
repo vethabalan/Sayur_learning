@@ -80,6 +80,7 @@ while owner == True:
                 print('entered dish is not sell today')
                 continue
         
+        
     #this condition is for the remaining quantity  
     elif Owner_question == 'i want the details of remaining quantity':
         dish = input('which dish remaining quantity do you want? : ')
