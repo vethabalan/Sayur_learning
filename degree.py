@@ -12,13 +12,13 @@ min_mark = 0
 if((mark_1>=max_mark) and (mark_2>=max_mark) and (mark_3>=max_mark) and (mark_4>=max_mark) and (mark_5>=max_mark)):
     print("pass")
 
-    
+#assigning maximum and minimum mark for each statement    
     max_mark = 90
     min_mark = 40
 elif((mark_1>=max_mark) and (mark_2>=max_mark) and (mark_3>=max_mark) and (mark_4>=min_mark) and (mark_5>=min_mark)):
     print("pass")
 
-
+#assigning maximum and minimum mark for each statement
     max_mark = 75
     min_mark = 50
 
